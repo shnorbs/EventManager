@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminModeSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminModeSelect.Designer.cs">
+      <DependentUpon>AdminModeSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DayUC.cs">
       <SubType>UserControl</SubType>
@@ -65,12 +71,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewEventsToday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEventsToday.Designer.cs">
+      <DependentUpon>ViewEventsToday.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminModeSelect.resx">
+      <DependentUpon>AdminModeSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DayUC.resx">
       <DependentUpon>DayUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +102,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ViewEventsToday.resx">
+      <DependentUpon>ViewEventsToday.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +124,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\next1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %282%29 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

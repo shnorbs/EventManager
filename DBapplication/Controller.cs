@@ -36,19 +36,29 @@ namespace DBapplication
             return (string)dbMan.ExecuteScalar(query);
         }
 
-        public int FindEventsPrivateToday(int uID, string date)
+        public int FindCountPrivateToday(int uID, string date)
         {
             string query = "select count(*) from Users u, EventT E, Invites I where u.UserID = I.UserID AND E.EventID = I.EventID AND E.Privacy_Status = 1 AND u.UserID = " + uID + " AND i.RSVP_Status = 1 AND E.Edate = '" + date + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
 
-        public int FindPublicEventsToday(string date)
+        public int FindCountPublicToday(string date)
         {
             string query = "select count(E.EventID) from EventT E where E.Edate = '" + date + "' AND E.Privacy_Status = 0;";
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public DataTable FindPublicEventsToday(string date)
+        {
+            string query = "select E.EventName, E.Start_Time, E.End_Time, V.Venue_Name  from EventT E, Venue V where E.Location = V.Venue_ID AND E.Edate = '" + date + "' AND E.Privacy_Status = 0;";
+            return dbMan.ExecuteReader(query);
+        }
 
+        public DataTable FindPrivateEventsToday(int uID, string date)
+        {
+            string query = "select E.EventName, E.Start_Time, E.End_Time, V.Venue_Name from Users u, EventT E, Invites I, Venue V where u.UserID = I.UserID AND E.EventID = I.EventID AND E.Location = V.Venue_ID AND E.Privacy_Status = 1 AND u.UserID = " + uID + " AND i.RSVP_Status = 1 AND E.Edate = '" + date + "';";
+            return dbMan.ExecuteReader(query);
+        }
 
 
         public void TerminateConnection()

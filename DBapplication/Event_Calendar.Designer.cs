@@ -61,8 +61,6 @@
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.monthLabel = new System.Windows.Forms.Label();
-            this.prev = new System.Windows.Forms.PictureBox();
-            this.next = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,9 +69,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.OrganizerBtn = new System.Windows.Forms.Button();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.next = new System.Windows.Forms.PictureBox();
+            this.prev = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prev)).BeginInit();
+            this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prev)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -333,38 +335,19 @@
             // 
             // monthLabel
             // 
+            this.monthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.monthLabel.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthLabel.Location = new System.Drawing.Point(8, 9);
+            this.monthLabel.ForeColor = System.Drawing.Color.White;
+            this.monthLabel.Location = new System.Drawing.Point(20, 16);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(223, 104);
+            this.monthLabel.Size = new System.Drawing.Size(223, 87);
             this.monthLabel.TabIndex = 1;
             this.monthLabel.Text = "MONTH\r\nYEAR";
-            // 
-            // prev
-            // 
-            this.prev.Image = global::DBapplication.Properties.Resources.next1;
-            this.prev.Location = new System.Drawing.Point(265, 9);
-            this.prev.Name = "prev";
-            this.prev.Size = new System.Drawing.Size(59, 47);
-            this.prev.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.prev.TabIndex = 3;
-            this.prev.TabStop = false;
-            this.prev.Click += new System.EventHandler(this.prev_Click);
-            // 
-            // next
-            // 
-            this.next.Image = global::DBapplication.Properties.Resources.next1;
-            this.next.Location = new System.Drawing.Point(330, 9);
-            this.next.Name = "next";
-            this.next.Size = new System.Drawing.Size(59, 47);
-            this.next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.next.TabIndex = 2;
-            this.next.TabStop = false;
-            this.next.Click += new System.EventHandler(this.next_Click);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 47);
@@ -376,6 +359,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(189, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 47);
@@ -386,6 +370,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(365, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 47);
@@ -396,6 +381,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(717, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 47);
@@ -406,6 +392,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(541, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(170, 47);
@@ -416,6 +403,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(893, 123);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 47);
@@ -426,6 +414,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(1069, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 47);
@@ -435,19 +424,54 @@
             // 
             // OrganizerBtn
             // 
-            this.OrganizerBtn.Location = new System.Drawing.Point(809, 57);
+            this.OrganizerBtn.Location = new System.Drawing.Point(878, 39);
             this.OrganizerBtn.Name = "OrganizerBtn";
-            this.OrganizerBtn.Size = new System.Drawing.Size(142, 35);
+            this.OrganizerBtn.Size = new System.Drawing.Size(164, 47);
             this.OrganizerBtn.TabIndex = 11;
             this.OrganizerBtn.Text = "Organize Event";
             this.OrganizerBtn.UseVisualStyleBackColor = true;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel32.Controls.Add(this.next);
+            this.panel32.Controls.Add(this.prev);
+            this.panel32.Controls.Add(this.OrganizerBtn);
+            this.panel32.Controls.Add(this.monthLabel);
+            this.panel32.Location = new System.Drawing.Point(-8, -7);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(1298, 116);
+            this.panel32.TabIndex = 12;
+            // 
+            // next
+            // 
+            this.next.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__2_;
+            this.next.Location = new System.Drawing.Point(215, 56);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(53, 47);
+            this.next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.next.TabIndex = 2;
+            this.next.TabStop = false;
+            this.next.Click += new System.EventHandler(this.next_Click);
+            // 
+            // prev
+            // 
+            this.prev.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__2___1_;
+            this.prev.Location = new System.Drawing.Point(150, 56);
+            this.prev.Name = "prev";
+            this.prev.Size = new System.Drawing.Size(59, 47);
+            this.prev.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.prev.TabIndex = 3;
+            this.prev.TabStop = false;
+            this.prev.Click += new System.EventHandler(this.prev_Click);
             // 
             // Event_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(1254, 963);
-            this.Controls.Add(this.OrganizerBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -455,16 +479,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.prev);
-            this.Controls.Add(this.next);
-            this.Controls.Add(this.monthLabel);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel32);
             this.Name = "Event_Calendar";
             this.Text = "Event_Calendar";
             this.Load += new System.EventHandler(this.Event_Calendar_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.prev)).EndInit();
+            this.panel32.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.next)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prev)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -514,5 +537,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button OrganizerBtn;
+        private System.Windows.Forms.Panel panel32;
     }
 }

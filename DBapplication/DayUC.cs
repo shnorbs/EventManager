@@ -13,17 +13,23 @@ namespace DBapplication
     public partial class DayUC : UserControl
     {
         
-
+        string current_day, current_month, current_year;
+        int ID;
         public DayUC(string d, string m, string y,int UserID ,Controller cont)
         {
             InitializeComponent();
 
             label1.Text = d;
+
+            current_day = d;
+            current_month = m;
+            current_year = y;
+            ID = UserID;
             
 
             if (d == "")
             {
-                this.BackColor = Color.FromArgb(240, 240, 240);
+                this.BackColor = Color.FromArgb(40, 44, 52);
                 panel1.Hide();
             }
             else
@@ -34,9 +40,16 @@ namespace DBapplication
 
                 string Today = year.ToString() + "-" + month.ToString() + "-" + day.ToString();
 
-                int EventsToday = cont.FindEventsPrivateToday(UserID, Today) + cont.FindPublicEventsToday(Today);
+                int EventsToday = cont.FindCountPrivateToday(UserID, Today) + cont.FindCountPublicToday(Today);
 
-                NoOfEvents.Text = EventsToday.ToString() + " Events";
+                if (EventsToday > 1)
+                    NoOfEvents.Text = EventsToday.ToString() + " Events";
+                else
+                    if (EventsToday == 1)
+                    NoOfEvents.Text = "1 Event";
+                else
+                    NoOfEvents.Text = "";
+
             }
 
         }
@@ -56,9 +69,23 @@ namespace DBapplication
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void DayUC_MouseClick(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void NoOfEvents_Click(object sender, EventArgs e)
+        {
+            if (NoOfEvents.Text != "")
+            {
+                ViewEventsToday f = new ViewEventsToday(current_day, current_month, current_year, ID);
+                f.Show();
+            }
         }
     }
 }

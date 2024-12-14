@@ -30,8 +30,16 @@ namespace DBapplication
 
             if (cont.LogIn(emailBox.Text, passwordBox.Text) > 0)
             {
-                Event_Calendar f = new Event_Calendar(cont.getUserID(emailBox.Text, passwordBox.Text), cont.getUserType(emailBox.Text, passwordBox.Text));
-                f.Show();
+                if (cont.getUserType(emailBox.Text, passwordBox.Text) == "Admin")
+                {
+                    AdminModeSelect f = new AdminModeSelect(cont.getUserID(emailBox.Text, passwordBox.Text));
+                    f.Show();
+                }
+                else
+                {
+                    Event_Calendar f = new Event_Calendar(cont.getUserID(emailBox.Text, passwordBox.Text), cont.getUserType(emailBox.Text, passwordBox.Text));
+                    f.Show();                  
+                }
             }
 
             else
