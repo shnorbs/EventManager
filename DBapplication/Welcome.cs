@@ -48,6 +48,11 @@ namespace DBapplication
             }
 
         }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

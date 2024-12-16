@@ -50,16 +50,27 @@ namespace DBapplication
 
         public DataTable FindPublicEventsToday(string date)
         {
-            string query = "select E.EventName, E.Start_Time, E.End_Time, V.Venue_Name  from EventT E, Venue V where E.Location = V.Venue_ID AND E.Edate = '" + date + "' AND E.Privacy_Status = 0;";
+            string query = "select E.EventName AS [Event Name], E.Start_Time AS [Starts At], E.End_Time AS [Ends At], V.Venue_Name AS [Venue Name]  from EventT E, Venue V where E.Location = V.Venue_ID AND E.Edate = '2024-12-1' AND E.Privacy_Status = 0;";
             return dbMan.ExecuteReader(query);
         }
 
         public DataTable FindPrivateEventsToday(int uID, string date)
         {
-            string query = "select E.EventName, E.Start_Time, E.End_Time, V.Venue_Name from Users u, EventT E, Invites I, Venue V where u.UserID = I.UserID AND E.EventID = I.EventID AND E.Location = V.Venue_ID AND E.Privacy_Status = 1 AND u.UserID = " + uID + " AND i.RSVP_Status = 1 AND E.Edate = '" + date + "';";
+            string query = "select E.EventName AS [Event Name], E.Start_Time AS [Starts At], E.End_Time AS [Ends At], V.Venue_Name AS [Venue Name] from Users u, EventT E, Invites I, Venue V where u.UserID = I.UserID AND E.EventID = I.EventID AND E.Location = V.Venue_ID AND E.Privacy_Status = 1 AND u.UserID = " + uID + " AND i.RSVP_Status = 1 AND E.Edate = '" + date + "';";
             return dbMan.ExecuteReader(query);
         }
 
+        public int GetEventID(string name, string startTime, string date)
+        {
+            string query = "select E.EventID from EventT E where E.EventName = '" + name + "' AND E.Start_Time = '" + startTime + "' AND E.Edate = '" + date + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public string GetEventDescription(int EventID)
+        {
+            string query = "select Descriptions from EventT where EventID = " + EventID + ";";
+            return (string)dbMan.ExecuteScalar(query);
+        }
 
         public void TerminateConnection()
         {

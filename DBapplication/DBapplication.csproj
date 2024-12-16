@@ -63,6 +63,12 @@
       <DependentUpon>DayUC.cs</DependentUpon>
     </Compile>
     <Compile Include="DBManager.cs" />
+    <Compile Include="EventDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventDetails.Designer.cs">
+      <DependentUpon>EventDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Event_Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DayUC.resx">
       <DependentUpon>DayUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventDetails.resx">
+      <DependentUpon>EventDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Event_Calendar.resx">
       <DependentUpon>Event_Calendar.cs</DependentUpon>
@@ -139,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\output-onlinepngtools %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools %285%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

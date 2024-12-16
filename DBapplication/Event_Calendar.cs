@@ -23,7 +23,7 @@ namespace DBapplication
             current_month = 12;
             uID = UserID;
 
-            if (UserType == "Normal_User") OrganizerBtn.Hide();
+            if (UserType == "Normal_User") addEventBtn.Hide();
         }
 
         private void Event_Calendar_Load(object sender, EventArgs e)

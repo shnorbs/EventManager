@@ -44,11 +44,14 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 50);
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(165, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(314, 36);
+            this.label3.Size = new System.Drawing.Size(278, 108);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome, Please Log-In";
+            this.label3.Text = "Welcome, \r\nPlease Log-In";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // emailBox
             // 
@@ -56,9 +59,10 @@
             this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.ForeColor = System.Drawing.Color.White;
-            this.emailBox.Location = new System.Drawing.Point(111, 182);
+            this.emailBox.Location = new System.Drawing.Point(157, 232);
+            this.emailBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(211, 20);
+            this.emailBox.Size = new System.Drawing.Size(316, 29);
             this.emailBox.TabIndex = 3;
             // 
             // passwordBox
@@ -67,9 +71,10 @@
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.passwordBox.ForeColor = System.Drawing.Color.White;
-            this.passwordBox.Location = new System.Drawing.Point(111, 236);
+            this.passwordBox.Location = new System.Drawing.Point(157, 315);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(211, 20);
+            this.passwordBox.Size = new System.Drawing.Size(316, 29);
             this.passwordBox.TabIndex = 4;
             // 
             // loginBtn
@@ -79,9 +84,10 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(268, 268);
+            this.loginBtn.Location = new System.Drawing.Point(356, 394);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(78, 35);
+            this.loginBtn.Size = new System.Drawing.Size(117, 54);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "Log In";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -89,25 +95,28 @@
             // 
             // regBtn
             // 
+            this.regBtn.AutoSize = true;
             this.regBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.regBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.regBtn.Location = new System.Drawing.Point(184, 268);
+            this.regBtn.Location = new System.Drawing.Point(230, 394);
+            this.regBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.regBtn.Name = "regBtn";
-            this.regBtn.Size = new System.Drawing.Size(78, 35);
+            this.regBtn.Size = new System.Drawing.Size(117, 54);
             this.regBtn.TabIndex = 6;
             this.regBtn.Text = "Sign Up";
-            this.regBtn.UseVisualStyleBackColor = false;
+            this.regBtn.UseVisualStyleBackColor = true;
             this.regBtn.Click += new System.EventHandler(this.regBtn_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(45, 231);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 306);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(90, 38);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -115,19 +124,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DBapplication.Properties.Resources.output_onlinepngtools;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 182);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 232);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(393, 450);
+            this.ClientSize = new System.Drawing.Size(590, 596);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.regBtn);
@@ -135,8 +146,12 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "Welcome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
