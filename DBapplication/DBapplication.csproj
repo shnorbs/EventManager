@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVenue.Designer.cs">
+      <DependentUpon>AddVenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminModeSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,12 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVenue.resx">
+      <DependentUpon>AddVenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminModeSelect.resx">
       <DependentUpon>AdminModeSelect.cs</DependentUpon>
     </EmbeddedResource>
