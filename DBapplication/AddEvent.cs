@@ -20,10 +20,10 @@ namespace DBapplication
         {
             InitializeComponent();
             userID = uID;
-            DataTable dt = controllerObj.SelectEventType();
-            EventType_combobox.DataSource = dt;
-            EventType_combobox.DisplayMember = "Etype";
-            EventType_combobox.ValueMember = "Etype";
+            //DataTable dt = controllerObj.SelectEventType();
+            //EventType_combobox.DataSource = dt;
+            //EventType_combobox.DisplayMember = "Etype";
+            //EventType_combobox.ValueMember = "Etype";
             DataTable dt1 = controllerObj.SelectLocation();
             Location_combobox.DataSource = dt1;
             Location_combobox.DisplayMember = "Venue_Name";
@@ -45,7 +45,7 @@ namespace DBapplication
             string EventName=EventName_textbox.Text;
             string EventDate = Convert.ToString(EventDate_picker.Value);
             string Description = Description_textbox.Text;
-            string EventType = Convert.ToString(EventType_combobox.SelectedValue);
+            string EventType =EventType_combobox.Text;
             string StartTime = Convert.ToString(StartTime_picker.Text);
             string EndTime = Convert.ToString(EndTime_picker.Text);
             int Privacy = 0;

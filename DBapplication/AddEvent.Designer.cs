@@ -61,7 +61,7 @@
             // EventName_textbox
             // 
             this.EventName_textbox.Location = new System.Drawing.Point(116, 32);
-            this.EventName_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EventName_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.EventName_textbox.Name = "EventName_textbox";
             this.EventName_textbox.Size = new System.Drawing.Size(158, 20);
             this.EventName_textbox.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.EventDate_picker.CustomFormat = "yyyy-MM-dd";
             this.EventDate_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.EventDate_picker.Location = new System.Drawing.Point(116, 72);
-            this.EventDate_picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EventDate_picker.Margin = new System.Windows.Forms.Padding(2);
             this.EventDate_picker.Name = "EventDate_picker";
             this.EventDate_picker.Size = new System.Drawing.Size(231, 20);
             this.EventDate_picker.TabIndex = 3;
@@ -99,7 +99,7 @@
             // Description_textbox
             // 
             this.Description_textbox.Location = new System.Drawing.Point(116, 119);
-            this.Description_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Description_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Description_textbox.Name = "Description_textbox";
             this.Description_textbox.Size = new System.Drawing.Size(158, 20);
             this.Description_textbox.TabIndex = 5;
@@ -117,8 +117,15 @@
             // EventType_combobox
             // 
             this.EventType_combobox.FormattingEnabled = true;
+            this.EventType_combobox.Items.AddRange(new object[] {
+            "Wedding",
+            "Conference",
+            "Concert",
+            "Gala",
+            "Party",
+            "Other"});
             this.EventType_combobox.Location = new System.Drawing.Point(116, 168);
-            this.EventType_combobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EventType_combobox.Margin = new System.Windows.Forms.Padding(2);
             this.EventType_combobox.Name = "EventType_combobox";
             this.EventType_combobox.Size = new System.Drawing.Size(158, 21);
             this.EventType_combobox.TabIndex = 7;
@@ -167,7 +174,7 @@
             // 
             this.Location_combobox.FormattingEnabled = true;
             this.Location_combobox.Location = new System.Drawing.Point(116, 332);
-            this.Location_combobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Location_combobox.Margin = new System.Windows.Forms.Padding(2);
             this.Location_combobox.Name = "Location_combobox";
             this.Location_combobox.Size = new System.Drawing.Size(158, 21);
             this.Location_combobox.TabIndex = 14;
@@ -175,7 +182,7 @@
             // AddEvent_button
             // 
             this.AddEvent_button.Location = new System.Drawing.Point(38, 392);
-            this.AddEvent_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddEvent_button.Margin = new System.Windows.Forms.Padding(2);
             this.AddEvent_button.Name = "AddEvent_button";
             this.AddEvent_button.Size = new System.Drawing.Size(100, 50);
             this.AddEvent_button.TabIndex = 15;
@@ -188,7 +195,7 @@
             this.StartTime_picker.CustomFormat = "HH:mm ";
             this.StartTime_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.StartTime_picker.Location = new System.Drawing.Point(116, 219);
-            this.StartTime_picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartTime_picker.Margin = new System.Windows.Forms.Padding(2);
             this.StartTime_picker.Name = "StartTime_picker";
             this.StartTime_picker.ShowUpDown = true;
             this.StartTime_picker.Size = new System.Drawing.Size(54, 20);
@@ -199,7 +206,7 @@
             this.EndTime_picker.CustomFormat = "HH:mm";
             this.EndTime_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.EndTime_picker.Location = new System.Drawing.Point(116, 257);
-            this.EndTime_picker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EndTime_picker.Margin = new System.Windows.Forms.Padding(2);
             this.EndTime_picker.Name = "EndTime_picker";
             this.EndTime_picker.ShowUpDown = true;
             this.EndTime_picker.Size = new System.Drawing.Size(54, 20);
@@ -209,7 +216,7 @@
             // 
             this.Private_checkbox.AutoSize = true;
             this.Private_checkbox.Location = new System.Drawing.Point(116, 297);
-            this.Private_checkbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Private_checkbox.Margin = new System.Windows.Forms.Padding(2);
             this.Private_checkbox.Name = "Private_checkbox";
             this.Private_checkbox.Size = new System.Drawing.Size(59, 17);
             this.Private_checkbox.TabIndex = 13;
@@ -249,7 +256,7 @@
             this.Controls.Add(this.EventName_textbox);
             this.Controls.Add(this.EventName_label);
             this.Controls.Add(this.EndTime_picker);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddEvent";
             this.Text = "AddEvent";
             this.Load += new System.EventHandler(this.AddEvent_Load);
