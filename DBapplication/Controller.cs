@@ -105,11 +105,15 @@ namespace DBapplication
             }
         }
 
-        public void AddVenue(string VenueAddress,string VenueName,int Capacity,int BookingPrice)
+        public void AddVenue(string VenueAddress,string VenueName,int Capacity,int BookingPrice,string FacilityType)
         {
-            string query = $"INSERT INTO Venue (Venue_Address,Venue_Name,Capacity,Booking_Price) VALUES('{VenueAddress}','{VenueName}','{Capacity}','{BookingPrice}');";
-            int obj = dbMan.ExecuteNonQuery(query);
-            if (obj == 0)
+            string query1 = $"INSERT INTO Venue (Venue_Address,Venue_Name,Capacity,Booking_Price) VALUES('{VenueAddress}','{VenueName}','{Capacity}','{BookingPrice}');";
+            int obj1 = dbMan.ExecuteNonQuery(query1);
+            string retreiveid = $"SELECT Venue_ID FROM Venue Where Venue_Name='{VenueName}';";
+            int id=Convert.ToInt32(dbMan.ExecuteScalar(retreiveid));    
+            string query2 = $"INSERT INTO Facilities(Venue_Related_ID,Type) Values('{id}','{FacilityType}');";
+            int obj2=dbMan.ExecuteNonQuery(query2);
+            if (obj1 == 0 && obj2 == 0) 
             {
                 MessageBox.Show("Couldn't Add Venue");
                 return;
@@ -119,6 +123,7 @@ namespace DBapplication
                 MessageBox.Show("Added Venue");
                 return;
             }
+
         }
 
 
