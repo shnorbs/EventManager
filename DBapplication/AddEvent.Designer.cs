@@ -46,6 +46,19 @@
             this.EndTime_picker = new System.Windows.Forms.DateTimePicker();
             this.Private_checkbox = new System.Windows.Forms.CheckBox();
             this.AddVenue_button = new System.Windows.Forms.Button();
+            this.Tickets_label = new System.Windows.Forms.Label();
+            this.TicketsDataGrid = new System.Windows.Forms.DataGridView();
+            this.TicketType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tprice_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number_of_tickets_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Service_label = new System.Windows.Forms.Label();
+            this.ServicesDataGrid = new System.Windows.Forms.DataGridView();
+            this.ServiceName_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Refresh_Button = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.TicketsDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServicesDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // EventName_label
@@ -181,7 +194,7 @@
             // 
             // AddEvent_button
             // 
-            this.AddEvent_button.Location = new System.Drawing.Point(38, 392);
+            this.AddEvent_button.Location = new System.Drawing.Point(38, 438);
             this.AddEvent_button.Margin = new System.Windows.Forms.Padding(2);
             this.AddEvent_button.Name = "AddEvent_button";
             this.AddEvent_button.Size = new System.Drawing.Size(100, 50);
@@ -225,7 +238,7 @@
             // 
             // AddVenue_button
             // 
-            this.AddVenue_button.Location = new System.Drawing.Point(642, 64);
+            this.AddVenue_button.Location = new System.Drawing.Point(769, 60);
             this.AddVenue_button.Name = "AddVenue_button";
             this.AddVenue_button.Size = new System.Drawing.Size(186, 75);
             this.AddVenue_button.TabIndex = 18;
@@ -233,11 +246,98 @@
             this.AddVenue_button.UseVisualStyleBackColor = true;
             this.AddVenue_button.Click += new System.EventHandler(this.AddVenue_button_Click);
             // 
+            // Tickets_label
+            // 
+            this.Tickets_label.AutoSize = true;
+            this.Tickets_label.Location = new System.Drawing.Point(327, 144);
+            this.Tickets_label.Name = "Tickets_label";
+            this.Tickets_label.Size = new System.Drawing.Size(42, 13);
+            this.Tickets_label.TabIndex = 19;
+            this.Tickets_label.Text = "Tickets";
+            // 
+            // TicketsDataGrid
+            // 
+            this.TicketsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TicketsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TicketType_column,
+            this.Tprice_column,
+            this.Number_of_tickets_column});
+            this.TicketsDataGrid.Location = new System.Drawing.Point(330, 160);
+            this.TicketsDataGrid.Name = "TicketsDataGrid";
+            this.TicketsDataGrid.Size = new System.Drawing.Size(343, 150);
+            this.TicketsDataGrid.TabIndex = 20;
+            // 
+            // TicketType_column
+            // 
+            this.TicketType_column.HeaderText = "Ticket Type";
+            this.TicketType_column.Name = "TicketType_column";
+            // 
+            // Tprice_column
+            // 
+            this.Tprice_column.HeaderText = "Price";
+            this.Tprice_column.Name = "Tprice_column";
+            // 
+            // Number_of_tickets_column
+            // 
+            this.Number_of_tickets_column.HeaderText = "Number of tickets";
+            this.Number_of_tickets_column.Name = "Number_of_tickets_column";
+            // 
+            // Service_label
+            // 
+            this.Service_label.AutoSize = true;
+            this.Service_label.Location = new System.Drawing.Point(327, 332);
+            this.Service_label.Name = "Service_label";
+            this.Service_label.Size = new System.Drawing.Size(93, 13);
+            this.Service_label.TabIndex = 21;
+            this.Service_label.Text = "Services(Optional)";
+            // 
+            // ServicesDataGrid
+            // 
+            this.ServicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ServicesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ServiceName_column,
+            this.ServiceType_column,
+            this.Price_column});
+            this.ServicesDataGrid.Location = new System.Drawing.Point(330, 355);
+            this.ServicesDataGrid.Name = "ServicesDataGrid";
+            this.ServicesDataGrid.Size = new System.Drawing.Size(343, 150);
+            this.ServicesDataGrid.TabIndex = 24;
+            // 
+            // ServiceName_column
+            // 
+            this.ServiceName_column.HeaderText = "Service Name";
+            this.ServiceName_column.Name = "ServiceName_column";
+            // 
+            // ServiceType_column
+            // 
+            this.ServiceType_column.HeaderText = "Service Type";
+            this.ServiceType_column.Name = "ServiceType_column";
+            // 
+            // Price_column
+            // 
+            this.Price_column.HeaderText = "Price";
+            this.Price_column.Name = "Price_column";
+            // 
+            // Refresh_Button
+            // 
+            this.Refresh_Button.Location = new System.Drawing.Point(152, 358);
+            this.Refresh_Button.Name = "Refresh_Button";
+            this.Refresh_Button.Size = new System.Drawing.Size(75, 23);
+            this.Refresh_Button.TabIndex = 25;
+            this.Refresh_Button.Text = "Refresh";
+            this.Refresh_Button.UseVisualStyleBackColor = true;
+            this.Refresh_Button.Click += new System.EventHandler(this.Refresh_Button_Click);
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 575);
+            this.Controls.Add(this.Refresh_Button);
+            this.Controls.Add(this.ServicesDataGrid);
+            this.Controls.Add(this.Service_label);
+            this.Controls.Add(this.TicketsDataGrid);
+            this.Controls.Add(this.Tickets_label);
             this.Controls.Add(this.AddVenue_button);
             this.Controls.Add(this.StartTime_picker);
             this.Controls.Add(this.AddEvent_button);
@@ -260,6 +360,8 @@
             this.Name = "AddEvent";
             this.Text = "AddEvent";
             this.Load += new System.EventHandler(this.AddEvent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TicketsDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServicesDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +387,16 @@
         private System.Windows.Forms.DateTimePicker EndTime_picker;
         private System.Windows.Forms.CheckBox Private_checkbox;
         private System.Windows.Forms.Button AddVenue_button;
+        private System.Windows.Forms.Label Tickets_label;
+        private System.Windows.Forms.DataGridView TicketsDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TicketType_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tprice_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number_of_tickets_column;
+        private System.Windows.Forms.Label Service_label;
+        private System.Windows.Forms.DataGridView ServicesDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceName_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceType_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price_column;
+        private System.Windows.Forms.Button Refresh_Button;
     }
 }

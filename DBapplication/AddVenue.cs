@@ -17,7 +17,6 @@ namespace DBapplication
         public AddVenue(int userID)
         {
             InitializeComponent();
-            FacilityType_textbox.Enabled = false;
         }
 
         private void AddVenue_button_Click(object sender, EventArgs e)
@@ -42,32 +41,21 @@ namespace DBapplication
                 MessageBox.Show("Please Enter a positive booking price number");
                 return;
             }
-            if (FacilityType_combobox.SelectedItem.ToString() == "Other" && FacilityType_textbox.Text.Length == 0)
-            {
-                MessageBox.Show("Please Enter a facility");
-                return;
-            }
             string FacilityType;
-            if(FacilityType_combobox.SelectedItem.ToString() == "Other")
-            {
-                FacilityType= FacilityType_textbox.Text;
-            }
-            else
-            {
-                FacilityType = FacilityType_combobox.Text;
-            }
             string VenueAddress = VenueAddress_textbox.Text;
             string VenueName= VenueName_textbox.Text;
             int Capacity = Convert.ToInt32(Capacity_textbox.Text);
-            int BookingPrice=Convert.ToInt32(BookingPrice_textbox.Text);
-            controllerObj.AddVenue(VenueAddress,VenueName,Capacity,BookingPrice,FacilityType);
+            float BookingPrice=(float)Convert.ToDouble(BookingPrice_textbox.Text);
+            controllerObj.AddVenue(VenueAddress, VenueName, Capacity, BookingPrice);
+            for (int i = 0; i < FacilityTypeDataGrid.Rows.Count - 1; i++)
+            {
+                FacilityType= FacilityTypeDataGrid.Rows[i].Cells[0].Value.ToString();
+                controllerObj.AddFacility(VenueName, FacilityType);
+               // controllerObj.AddVenue(VenueAddress, VenueName, Capacity, BookingPrice, FacilityType);
+            }
+            //controllerObj.AddVenue(VenueAddress, VenueName, Capacity, BookingPrice);
         }
 
-        private void Return_button_Click(object sender, EventArgs e)
-        {
-            AddEvent Av = new AddEvent(uID);
-            Av.Show();
-        }
 
         private void FacilityType_textbox_TextChanged(object sender, EventArgs e)
         {
@@ -77,19 +65,6 @@ namespace DBapplication
         private void AddVenue_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void FacilityType_combobox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(FacilityType_combobox.SelectedItem.ToString()=="Other")
-            {
-                FacilityType_textbox.Enabled = true;
-            }
-            else
-            {
-                FacilityType_textbox.Enabled = false;
-                FacilityType_textbox.Text=string.Empty;
-            }
         }
     }
 }

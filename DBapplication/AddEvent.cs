@@ -35,6 +35,7 @@ namespace DBapplication
 
         }
 
+
         private void AddEvent_button_Click(object sender, EventArgs e)
         {
             if(EventName_textbox.Text.Length==0)
@@ -59,12 +60,36 @@ namespace DBapplication
             }
             int Location =Convert.ToInt32(Location_combobox.SelectedValue);
             controllerObj.AddEvent(EventName,userID,EventDate,Description,EventType,StartTime,EndTime,Privacy,Location);
+            for (int i = 0; i < TicketsDataGrid.Rows.Count-1; i++)
+            {
+                string TicketType = TicketsDataGrid.Rows[i].Cells[0].Value.ToString();
+                float price =(float)Convert.ToDouble(TicketsDataGrid.Rows[i].Cells[1].Value); 
+                int NumberofTickets=Convert.ToInt32(TicketsDataGrid.Rows[i].Cells[2].Value);
+                controllerObj.AddTickets(TicketType,price,NumberofTickets,EventName);
+            }
+            for(int i = 0;i < ServicesDataGrid.Rows.Count-1;i++)
+            {
+                string ServiceName = ServicesDataGrid.Rows[i].Cells[0].Value.ToString();
+                string ServiceType = ServicesDataGrid.Rows[i].Cells[1].Value.ToString();
+                float Sprice = (float)Convert.ToDouble(ServicesDataGrid.Rows[i].Cells[2].Value);
+                controllerObj.AddService(ServiceName, ServiceType, Sprice);
+                controllerObj.BookService(ServiceName,EventName,EventDate,Sprice);
+            }
         }
 
         private void AddVenue_button_Click(object sender, EventArgs e)
         {
             AddVenue Fv = new AddVenue(userID);
             Fv.Show();
+        }
+
+        private void Refresh_Button_Click(object sender, EventArgs e)
+        {
+            DataTable dt1 = controllerObj.SelectLocation();
+            Location_combobox.DataSource = dt1;
+            Location_combobox.DisplayMember = "Venue_Name";
+            Location_combobox.ValueMember = "Venue_ID";
+
         }
     }
 }
