@@ -25,5 +25,11 @@ namespace DBapplication
             Event_Calendar f = new Event_Calendar(ID, "Admin");
             f.Show();
         }
+
+        private void AdminMode_Click(object sender, EventArgs e)
+        {
+            AdminMode form = new AdminMode();
+            form.Show();
+        }
     }
 }

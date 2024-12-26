@@ -43,8 +43,9 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 148);
+            this.panel1.Size = new System.Drawing.Size(196, 183);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -52,11 +53,12 @@
             // 
             this.NoOfEvents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NoOfEvents.AutoSize = true;
-            this.NoOfEvents.Font = new System.Drawing.Font("Segoe UI Variable Display", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoOfEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoOfEvents.ForeColor = System.Drawing.Color.White;
-            this.NoOfEvents.Location = new System.Drawing.Point(29, 58);
+            this.NoOfEvents.Location = new System.Drawing.Point(34, 71);
+            this.NoOfEvents.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NoOfEvents.Name = "NoOfEvents";
-            this.NoOfEvents.Size = new System.Drawing.Size(108, 32);
+            this.NoOfEvents.Size = new System.Drawing.Size(139, 36);
             this.NoOfEvents.TabIndex = 2;
             this.NoOfEvents.Text = "0 Events";
             this.NoOfEvents.Click += new System.EventHandler(this.NoOfEvents_Click);
@@ -66,23 +68,25 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 28);
+            this.label1.Size = new System.Drawing.Size(46, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "00";
             // 
             // DayUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DayUC";
             this.Padding = new System.Windows.Forms.Padding(1);
-            this.Size = new System.Drawing.Size(170, 150);
+            this.Size = new System.Drawing.Size(198, 185);
             this.Load += new System.EventHandler(this.DayUC_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DayUC_MouseClick);
             this.panel1.ResumeLayout(false);

@@ -72,6 +72,33 @@ namespace DBapplication
             return (string)dbMan.ExecuteScalar(query);
         }
 
+
+        public DataTable LoadReports ()
+        {
+            string query = "SELECT R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
+                           "FROM Report AS R " +
+                           "JOIN EventT AS E ON R.EventID = E.EventID";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable ShowReports (string filter) 
+        {
+            string query = "SELECT R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
+                           "FROM Report AS R " +
+                           "JOIN EventT AS E ON R.EventID = E.EventID"; // Default query for "All"
+
+            if (filter == "Handled")
+            {
+                query += " WHERE R.Handled = 1";
+            }
+            else if (filter == "Unhandled")
+            {
+                query += " WHERE R.Handled = 0";
+            }
+
+            return dbMan.ExecuteReader(query);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
