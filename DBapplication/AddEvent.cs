@@ -148,5 +148,17 @@ namespace DBapplication
         {
 
         }
+
+        private void AddSponsor_button_Click(object sender, EventArgs e)
+        {
+            if (EventName_textbox.Text.Length == 0)
+            {
+                MessageBox.Show("Please Enter Event Name");
+                return;
+            }
+            string EventName = EventName_textbox.Text;
+            Sponsor Fs=new Sponsor(EventName);
+            Fs.Show();
+        }
     }
 }
