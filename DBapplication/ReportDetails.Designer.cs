@@ -110,7 +110,6 @@
             this.AdminReplyBox.Name = "AdminReplyBox";
             this.AdminReplyBox.Size = new System.Drawing.Size(545, 62);
             this.AdminReplyBox.TabIndex = 7;
-            this.AdminReplyBox.Text = "Enter your response...";
             // 
             // BanOrganizerButton
             // 

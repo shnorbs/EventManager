@@ -135,7 +135,8 @@ namespace DBapplication
         public int DeleteEvent (int reportID)
         {
             int eventID = getEventID (reportID);
-            string query = "DELETE FROM EventT " +
+            string query = "UPDATE EventT " +
+                           "SET Active = 0 " +
                            "WHERE EventID = " + eventID + ";";
             return dbMan.ExecuteNonQuery (query);
         }
@@ -158,7 +159,7 @@ namespace DBapplication
         public int setAdminReply (int reportID, string adminReply)
         {
             string query = "UPDATE Report " +
-                           "SET Handled = 1, Admin_Reply = '" + adminReply + 
+                           "SET Handled = 1, Admin_Reply = '" + adminReply +  
                            "' WHERE Report_ID = " + reportID + ";";
             return dbMan.ExecuteNonQuery (query);
         }
