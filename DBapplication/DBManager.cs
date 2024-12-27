@@ -11,7 +11,9 @@ namespace DBapplication
     public class DBManager
     {
 
-        static string DB_Connection_String = @"Data Source=LAPTOP-LM4QRUS2\SQLEXPRESS01;Initial Catalog=EventManager;Integrated Security=True;Encrypt=False";
+
+        static string DB_Connection_String = @"Data Source=SHNORBS_LAP\SQLEXPRESS;Initial Catalog=EventManager;Integrated Security=True;Encrypt=False;";
+
 
         SqlConnection myConnection;
 
@@ -25,7 +27,7 @@ namespace DBapplication
                 // just for illustration when the database is opened, 
                 // this should NOT be shown in GUI to the user in the final application
                 // but we show it here only to make sure that the database is working
-                MessageBox.Show("Successfully connected to the database!");
+                //MessageBox.Show("Successfully connected to the database!");
             }
             catch (Exception e)
             {

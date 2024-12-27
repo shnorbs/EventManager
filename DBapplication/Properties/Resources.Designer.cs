@@ -143,6 +143,26 @@ namespace DBapplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__6_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools__7_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngegg {
             get {
                 object obj = ResourceManager.GetObject("pngegg", resourceCulture);
