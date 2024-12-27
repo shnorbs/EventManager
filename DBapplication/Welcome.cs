@@ -22,7 +22,8 @@ namespace DBapplication
 
         private void regBtn_Click(object sender, EventArgs e)
         {
-
+            SignUp f = new SignUp();
+            f.Show();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Runtime.Remoting.Messaging;
 
 namespace DBapplication
 {
@@ -22,6 +23,40 @@ namespace DBapplication
         {
             string query = "select count(*) from Users u where u.Email = '" + email + "' AND u.Password = '" + pass + "';";
             return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int CheckUniqueEmail(string email)
+        {
+            string query = "select count(*) from Users where Email = '" + email + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int AddOrganzierWithLastName(string Fname, string Lname, string Type, string Email, string Pass, float number, string Spec)
+        {
+            string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +
+                "('" + Fname + "', '" + Lname + "', '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, '" + Spec + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int AddOrganzier(string Fname, string Type, string Email, string Pass, float number, string Spec)
+        {
+            string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +
+                "('" + Fname + "', NULL, '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, '" + Spec + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int AddUserWithLastName(string Fname, string Lname, string Type, string Email, string Pass, float number)
+        {
+            string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +
+                "('" + Fname + "', '" + Lname + "', '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, NULL);";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int AddUser(string Fname, string Type, string Email, string Pass, float number)
+        {
+            string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +
+                "('" + Fname + "', NULL, '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, NULL);";
+            return dbMan.ExecuteNonQuery(query);
         }
 
         public int getUserID(string email, string pass)
@@ -50,7 +85,7 @@ namespace DBapplication
 
         public DataTable FindPublicEventsToday(string date)
         {
-            string query = "select E.EventName AS [Event Name], E.Start_Time AS [Starts At], E.End_Time AS [Ends At], V.Venue_Name AS [Venue Name]  from EventT E, Venue V where E.Location = V.Venue_ID AND E.Edate = '2024-12-1' AND E.Privacy_Status = 0;";
+            string query = "select E.EventName AS [Event Name], E.Start_Time AS [Starts At], E.End_Time AS [Ends At], V.Venue_Name AS [Venue Name]  from EventT E, Venue V where E.Location = V.Venue_ID AND E.Edate = '" + date + "' AND E.Privacy_Status = 0;";
             return dbMan.ExecuteReader(query);
         }
 
