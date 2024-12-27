@@ -65,7 +65,7 @@ namespace DBapplication
                 //DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[0]; 
                 //string cellValue = cell.Value.ToString(); 
                 int EventID = controllerObj.GetEventID(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), Today);
-                PublicEventDetails f = new PublicEventDetails(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), EventID);
+                PublicEventDetails f = new PublicEventDetails(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString(), dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString(), EventID, ID);
                 f.Show();
             }
         }
