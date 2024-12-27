@@ -75,7 +75,7 @@ namespace DBapplication
 
         public DataTable LoadReports ()
         {
-            string query = "SELECT R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
+            string query = "SELECT R.Report_ID, R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
                            "FROM Report AS R " +
                            "JOIN EventT AS E ON R.EventID = E.EventID";
             return dbMan.ExecuteReader(query);
@@ -83,9 +83,9 @@ namespace DBapplication
 
         public DataTable ShowReports (string filter) 
         {
-            string query = "SELECT R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
+            string query = "SELECT R.Report_ID, R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
                            "FROM Report AS R " +
-                           "JOIN EventT AS E ON R.EventID = E.EventID"; // Default query for "All"
+                           "JOIN EventT AS E ON R.EventID = E.EventID"; // default query for "All"
 
             if (filter == "Handled")
             {
@@ -97,6 +97,70 @@ namespace DBapplication
             }
 
             return dbMan.ExecuteReader(query);
+        }
+
+        public string getReportedEventName (int reportID)
+        {
+            string query = "SELECT E.EventName " +
+                           "FROM Report AS R " +
+                           "JOIN EventT AS E ON R.EventID = E.EventID " +
+                           "WHERE R.Report_ID = " + reportID + ";";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public string getReportDescription (int reportID)
+        {
+            string query = "SELECT Report_Description " +
+                           "FROM Report " +
+                           "WHERE Report_ID = " + reportID + ";";
+            return dbMan.ExecuteScalar (query).ToString();
+        }
+
+        public string getAdminReply (int reportID)
+        {
+            string query = "SELECT Admin_Reply " +
+                           "FROM Report " +
+                           "WHERE Report_ID = " + reportID + ";";
+            return dbMan.ExecuteScalar(query).ToString ();
+        }
+
+        public int getEventID (int reportID) // using reportID
+        {
+            string query = "SELECT EventID " +
+                            "FROM Report " +
+                            "WHERE Report_ID = " + reportID + ";";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int DeleteEvent (int reportID)
+        {
+            int eventID = getEventID (reportID);
+            string query = "DELETE FROM EventT " +
+                           "WHERE EventID = " + eventID + ";";
+            return dbMan.ExecuteNonQuery (query);
+        }
+
+        public int BanOrganizer (int reportID)
+        {
+            int eventID = getEventID (reportID);
+
+            string query1 = "SELECT Organizer " +
+                            "FROM EventT " +
+                            "WHERE EventID = " + eventID + ";";
+            int organizerID = (int) dbMan.ExecuteScalar (query1);
+
+            string query2 = "UPDATE Users " +
+                            "SET Banned = 1 " +
+                            "WHERE UserID = " + organizerID + ";";
+            return dbMan.ExecuteNonQuery(query2);
+        }
+
+        public int setAdminReply (int reportID, string adminReply)
+        {
+            string query = "UPDATE Report " +
+                           "SET Handled = 1, Admin_Reply = '" + adminReply + 
+                           "' WHERE Report_ID = " + reportID + ";";
+            return dbMan.ExecuteNonQuery (query);
         }
 
         public void TerminateConnection()
