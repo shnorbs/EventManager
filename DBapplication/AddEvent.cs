@@ -141,5 +141,10 @@ namespace DBapplication
             Location_combobox.ValueMember = "Venue_ID";
 
         }
+
+        private void EventName_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -443,18 +443,19 @@ namespace DBapplication
             // 
             this.addEventBtn.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__5_;
             this.addEventBtn.Location = new System.Drawing.Point(1065, 46);
-            this.addEventBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addEventBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addEventBtn.Name = "addEventBtn";
             this.addEventBtn.Size = new System.Drawing.Size(61, 47);
             this.addEventBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addEventBtn.TabIndex = 13;
             this.addEventBtn.TabStop = false;
+            this.addEventBtn.Click += new System.EventHandler(this.addEventBtn_Click_1);
             // 
             // remindersBtn
             // 
             this.remindersBtn.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__3_;
             this.remindersBtn.Location = new System.Drawing.Point(1173, 46);
-            this.remindersBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.remindersBtn.Margin = new System.Windows.Forms.Padding(2);
             this.remindersBtn.Name = "remindersBtn";
             this.remindersBtn.Size = new System.Drawing.Size(61, 47);
             this.remindersBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -526,7 +527,7 @@ namespace DBapplication
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9
+        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;

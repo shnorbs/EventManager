@@ -54,7 +54,12 @@ namespace DBapplication
 
         private void addEventBtn_Click(object sender, EventArgs e)
         {
-            AddEvent Fevent= new AddEvent(uID);
+            
+        }
+
+        private void addEventBtn_Click_1(object sender, EventArgs e)
+        {
+            AddEvent Fevent = new AddEvent(uID);
             Fevent.Show();
         }
 
