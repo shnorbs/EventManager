@@ -49,6 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Number = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Invites = new System.Windows.Forms.Button();
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportBtn)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             this.description.Size = new System.Drawing.Size(689, 64);
             this.description.TabIndex = 1;
             this.description.Text = "DESCRIPTION";
+            this.description.Click += new System.EventHandler(this.description_Click);
             // 
             // eventType
             // 
@@ -301,12 +303,27 @@
             this.label5.Text = "Tickets";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // Invites
+            // 
+            this.Invites.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Invites.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Invites.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Invites.ForeColor = System.Drawing.SystemColors.Control;
+            this.Invites.Location = new System.Drawing.Point(621, 174);
+            this.Invites.Name = "Invites";
+            this.Invites.Size = new System.Drawing.Size(169, 46);
+            this.Invites.TabIndex = 24;
+            this.Invites.Text = "Invites";
+            this.Invites.UseVisualStyleBackColor = false;
+            this.Invites.Click += new System.EventHandler(this.Invites_Click);
+            // 
             // PublicEventDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(805, 435);
+            this.Controls.Add(this.Invites);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Number);
             this.Controls.Add(this.button2);
@@ -359,5 +376,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label Number;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Invites;
     }
 }

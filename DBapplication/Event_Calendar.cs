@@ -63,6 +63,26 @@ namespace DBapplication
             Fevent.Show();
         }
 
+        private void panel32_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel20_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void prev_Click(object sender, EventArgs e)
         {
             if (current_month == 1)
