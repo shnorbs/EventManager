@@ -39,7 +39,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,14 +81,26 @@
     <Compile Include="AdminMode.Designer.cs">
       <DependentUpon>AdminMode.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportDetails.cs">
+    <Compile Include="Admin_Addition.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportDetails.Designer.cs">
-      <DependentUpon>ReportDetails.cs</DependentUpon>
+    <Compile Include="Admin_Addition.Designer.cs">
+      <DependentUpon>Admin_Addition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statstics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statstics.Designer.cs">
+      <DependentUpon>Statstics.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewEventsToday.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +116,9 @@
     <EmbeddedResource Include="AdminModeSelect.resx">
       <DependentUpon>AdminModeSelect.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Addition.resx">
+      <DependentUpon>Admin_Addition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DayUC.resx">
       <DependentUpon>DayUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,8 +131,8 @@
     <EmbeddedResource Include="AdminMode.resx">
       <DependentUpon>AdminMode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportDetails.resx">
-      <DependentUpon>ReportDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Statstics.resx">
+      <DependentUpon>Statstics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +144,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewEventsToday.resx">
       <DependentUpon>ViewEventsToday.cs</DependentUpon>
     </EmbeddedResource>

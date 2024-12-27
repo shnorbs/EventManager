@@ -31,5 +31,17 @@ namespace DBapplication
             AdminMode form = new AdminMode();
             form.Show();
         }
+
+        private void AdminModeSelect_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_Admin_Click(object sender, EventArgs e)
+        {
+            Admin_Addition form = new Admin_Addition();
+            form.Show();
+
+        }
     }
 }

@@ -22,27 +22,42 @@ namespace DBapplication
         {
             controllerObj = new Controller();
             DataTable dt = controllerObj.LoadReports();
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
             dataGridView1.DataSource = dt;
         }
 
         private void filterBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = controllerObj.ShowReports(filterBox.Text);
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
             dataGridView1.DataSource = dt;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {   
-            int reportId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Report_ID"].Value);
-            bool handledValue = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Handled"].Value);
-            ReportDetails form = new ReportDetails(reportId, handledValue);
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin_Addition table = new Admin_Addition();
+            table.Show();
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Statstics form = new Statstics();
             form.Show();
+
         }
     }
 }
