@@ -148,5 +148,10 @@ namespace DBapplication
         {
 
         }
+
+        private void TicketsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

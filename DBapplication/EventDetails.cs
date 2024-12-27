@@ -19,6 +19,7 @@ namespace DBapplication
         
         int UserID;
         int EventID;
+        int ticketcount;
         public PublicEventDetails(string EventName, string StartTime, string EndTime, string VenueName, int eID, int uID)
         {
             InitializeComponent();
@@ -30,7 +31,11 @@ namespace DBapplication
             eventType.Text = "(Event Type: " + cont.GetEventType(eID) + ")";
             UserID = uID;
             EventID = eID;
-         
+            DataTable dt = cont.SelectTicketType(eID);
+            Ticket_Type.DisplayMember ="Ticket_Type";
+            Ticket_Type.ValueMember = "Ticket_Type";
+            Ticket_Type.DataSource = dt;
+
         }
 
         private void EventDetails_Load(object sender, EventArgs e)
@@ -53,6 +58,68 @@ namespace DBapplication
         {
             Report f = new Report(UserID, EventID);
             f.Show();
+        }
+
+        private void Buy_Click(object sender, EventArgs e)
+        {  if(Convert.ToInt32(Number.Text)<0)
+            {
+                MessageBox.Show("Must buy at least one ticket");
+                return;
+
+            }
+            DateTime today = DateTime.Today;
+            DateTime date = DateTime.Today;
+            string ticketType = Ticket_Type.SelectedValue.ToString();
+           int r= cont.InsertIntoBuys(ticketType,EventID,UserID,date,Convert.ToInt32(Number.Text));
+            if (r > 0)
+            { MessageBox.Show("Tickets" + Number.Text + "bought");
+
+                cont.UpdateTicketCount(ticketType, EventID,ticketcount- Convert.ToInt32(Number.Text));
+            }
+            else
+            {
+                MessageBox.Show("Transaction failed");
+            }
+        }
+
+        private void Ticket_Type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ticketcount=cont.GetTicketCount(Ticket_Type.SelectedValue.ToString(), EventID);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {  
+            int updated=Convert.ToInt32(Number.Text)+1;
+            if (updated > 10)
+            {
+                MessageBox.Show("Can only buy 10 at most");
+                return;
+            }
+            Number.Text = updated.ToString();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int updated = Convert.ToInt32(Number.Text) -1;
+            if (updated < 0)
+                return;
+            Number.Text = updated.ToString();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Number_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
