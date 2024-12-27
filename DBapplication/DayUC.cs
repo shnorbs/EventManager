@@ -74,9 +74,23 @@ namespace DBapplication
 
         }
 
-        private void DayUC_MouseClick(object sender, MouseEventArgs e)
+        private void panel1_MouseEnter(object sender, EventArgs e)
         {
+        }
 
+        private void DayUC_MouseEnter(object sender, EventArgs e)
+        {
+           // this.BackColor = Color.FromArgb(40, 0, 52);
+
+        }
+
+        private void DayUC_MouseClick(object sender, EventArgs e)
+        {
+            if (NoOfEvents.Text != "")
+            {
+                ViewEventsToday f = new ViewEventsToday(current_day, current_month, current_year, ID);
+                f.Show();
+            }
         }
 
         private void NoOfEvents_Click(object sender, EventArgs e)

@@ -111,6 +111,12 @@ namespace DBapplication
             return (string)dbMan.ExecuteScalar(query);
         }
 
+        public string GetEventType(int EventID)
+        {
+            string query = "select Etype from EventT where EventID = " + EventID + ";";
+            return (string)dbMan.ExecuteScalar(query);
+        }
+
 
         public DataTable SelectEventType()
         {

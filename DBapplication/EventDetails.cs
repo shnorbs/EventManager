@@ -21,6 +21,7 @@ namespace DBapplication
             endTimeLbl.Text = EndTime;
             venueName.Text = VenueName;
             description.Text = cont.GetEventDescription(EventID);
+            eventType.Text = cont.GetEventType(EventID);
 
         }
 
