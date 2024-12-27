@@ -52,6 +52,12 @@ namespace DBapplication
             }
         }
 
+        private void remindersBtn_Click(object sender, EventArgs e)
+        {
+            RemindersList form = new RemindersList(uID);
+            form.Show();
+        }
+
         private void prev_Click(object sender, EventArgs e)
         {
             if (current_month == 1)

@@ -15,15 +15,17 @@ namespace DBapplication
         Controller controllerObj;
         int reportID;
         bool isHandled;
+        int adminID;
 
         private bool isPlaceholderVisible = true;
         private readonly string placeholderText = "Enter your response...";
-        public ReportDetails(int rID, bool handledValue)
+        public ReportDetails(int rID, bool handledValue, int ID)
         {
             InitializeComponent();
             controllerObj = new Controller();
             reportID = rID;
             isHandled = handledValue;
+            adminID = ID;
 
             AdminReplyBox.ForeColor = Color.Gray;
             AdminReplyBox.Text = placeholderText;
@@ -82,8 +84,9 @@ namespace DBapplication
             }
             else
             {
-                int result = controllerObj.BanOrganizer(reportID);
-                if (result == 0)
+                int result1 = controllerObj.setAdminReply(reportID, AdminReplyBox.Text, adminID);
+                int result2 = controllerObj.BanOrganizer(reportID);
+                if (result1 == 0 || result2 == 0)
                 {
                     MessageBox.Show("No rows were deleted");
                 }
@@ -100,7 +103,7 @@ namespace DBapplication
             }
             else
             {
-                int result1 = controllerObj.setAdminReply(reportID, AdminReplyBox.Text);
+                int result1 = controllerObj.setAdminReply(reportID, AdminReplyBox.Text, adminID);
                 int result2 = controllerObj.DeleteEvent(reportID);
 
                 if (result1 == 0 || result2 == 0)
@@ -120,7 +123,7 @@ namespace DBapplication
             }
             else
             {
-                int result = controllerObj.setAdminReply(reportID, AdminReplyBox.Text);
+                int result = controllerObj.setAdminReply(reportID, AdminReplyBox.Text, adminID);
                 if(result == 0)
                 {
                     MessageBox.Show("No rows were deleted");

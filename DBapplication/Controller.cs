@@ -219,12 +219,72 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(query2);
         }
 
-        public int setAdminReply(int reportID, string adminReply)
+        public int setAdminReply(int reportID, string adminReply, int adminID)
         {
             string query = "UPDATE Report " +
-                           "SET Handled = 1, Admin_Reply = '" + adminReply +
-                           "' WHERE Report_ID = " + reportID + ";";
+                           "SET Handled = 1, Admin_Reply = '" + adminReply + "', AdminID = " + adminID +
+                           " WHERE Report_ID = " + reportID + ";";
             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable LoadReminders (int userID)
+        {
+            string query = "SELECT E.EventName, E.Descriptions, E.Edate, E.Start_Time, E.End_Time " +
+                           "FROM EventT AS E " +
+                           "JOIN Reminds AS R ON R.EventID = E.EventID " +
+                           "WHERE R.UserID = " + userID + ";";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable LoadInvites (int userID)
+        {
+            string query = "SELECT E.EventName, E.Descriptions, E.Edate, E.Start_Time, E.End_Time " +
+                           "FROM EventT AS E " +
+                           "JOIN Invites AS I ON I.EventID = E.EventID " +
+                           "WHERE I.RSVP_Status = 0 AND I.UserID = " + userID + ";";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int setRSVP (int userID, int eventID)
+        {
+            string query1 = "UPDATE Invites " +
+                            "SET RSVP_Status = 1 " +
+                            "WHERE UserID = " + userID + " AND EventID = " + eventID;
+            return dbMan.ExecuteNonQuery(query1);
+        }
+
+        public int AcceptInvitation(int userID, int eventID)
+        {
+            int result = setRSVP (userID, eventID);
+            if (result == 0)
+            {
+                MessageBox.Show("Operation failed");
+                return 0;
+            }
+            else
+            {
+                string query = "INSERT INTO Attending (EventID, UserID) " +
+                            "VALUES (" + eventID + ", " + userID + ");";
+
+                return dbMan.ExecuteNonQuery(query);
+            }
+        }
+
+        public int RejectInvitation(int userID, int eventID)
+        {
+            string query = "UPDATE Invites " +
+                           "SET RSVP_Status = 2 " +
+                           "WHERE UserID = " + userID + " AND EventID = " + eventID + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int GetEventIDFromInvite(string eventName, string date, string startTime)
+        {
+            string query = "SELECT EventID FROM EventT " +
+                          "WHERE EventName = '" + eventName + "' " +
+                          "AND Edate = '" + date + "' " +
+                          "AND Start_Time = '" + startTime + "';";
+            return (int)dbMan.ExecuteScalar(query);
         }
 
         public void TerminateConnection()

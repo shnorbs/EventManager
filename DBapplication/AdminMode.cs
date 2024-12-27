@@ -13,9 +13,11 @@ namespace DBapplication
     public partial class AdminMode : Form
     {
         Controller controllerObj;
-        public AdminMode()
+        int ID;
+        public AdminMode(int adminID)
         {
             InitializeComponent();
+            ID = adminID;
         }
 
         private void AdminMode_Load(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace DBapplication
         {
             int reportId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Report_ID"].Value);
             bool handledValue = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Handled"].Value);
-            ReportDetails form = new ReportDetails(reportId, handledValue);
+            ReportDetails form = new ReportDetails(reportId, handledValue, ID);
             form.Show();
         }
 
