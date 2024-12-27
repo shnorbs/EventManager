@@ -56,6 +56,11 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(query);
         }
 
+        public int ChangePassword(string email, string newPassword)
+        {
+            string query = "UPDATE Users SET Password = '" + newPassword + "' WHERE Email = '" + email + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
         public int AddUser(string Fname, string Type, string Email, string Pass, float number)
         {
             string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +

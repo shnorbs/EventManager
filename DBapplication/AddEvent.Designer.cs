@@ -290,7 +290,7 @@
             this.TicketsDataGrid.RowHeadersWidth = 51;
             this.TicketsDataGrid.Size = new System.Drawing.Size(457, 124);
             this.TicketsDataGrid.TabIndex = 20;
-            this.TicketsDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TicketsDataGrid_CellContentClick);
+          
             // 
             // TicketType_column
             // 

@@ -188,6 +188,16 @@ namespace DBapplication
         {
         
         }
+
+        private void emailBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
