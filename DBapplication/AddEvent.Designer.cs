@@ -61,6 +61,7 @@
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.AddSponsor_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TicketsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServicesDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -395,9 +396,8 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(-1, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(355, 69);
+            this.panel2.Size = new System.Drawing.Size(266, 56);
             this.panel2.TabIndex = 27;
             // 
             // label1
@@ -445,12 +445,27 @@
             this.label2.Text = "Can\'t Find Your Venue?\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // AddSponsor_button
+            // 
+            this.AddSponsor_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
+            this.AddSponsor_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddSponsor_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddSponsor_button.ForeColor = System.Drawing.Color.White;
+            this.AddSponsor_button.Location = new System.Drawing.Point(379, 535);
+            this.AddSponsor_button.Name = "AddSponsor_button";
+            this.AddSponsor_button.Size = new System.Drawing.Size(125, 50);
+            this.AddSponsor_button.TabIndex = 30;
+            this.AddSponsor_button.Text = "Add Sponsor";
+            this.AddSponsor_button.UseVisualStyleBackColor = false;
+            this.AddSponsor_button.Click += new System.EventHandler(this.AddSponsor_button_Click);
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(899, 822);
+            this.ClientSize = new System.Drawing.Size(674, 668);
+            this.Controls.Add(this.AddSponsor_button);
             this.Controls.Add(this.AddEvent_button);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -521,5 +536,6 @@
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button AddSponsor_button;
     }
 }

@@ -402,6 +402,45 @@ namespace DBapplication
         }
 
 
+        public void AddSponsor(string CompanyName,string EventName)
+        {
+            string E_id = $"Select EventID From EventT Where EventName='{EventName}';";
+            int Eid = Convert.ToInt32(dbMan.ExecuteScalar(E_id));
+            string query = $"Insert INTO Sponsors(CompanyName) values('{CompanyName}');";
+            int obj = dbMan.ExecuteNonQuery(query);
+            if (obj == 0)
+            {
+                MessageBox.Show("Couldn't add sponsor");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Added Sponsor");
+                return;
+            }
+        }
+
+        public void AddSponsored(string CompanyName,float AmountSponsored ,string EventName)
+        {
+            string E_id = $"Select EventID From EventT Where EventName='{EventName}';";
+            int Eid = Convert.ToInt32(dbMan.ExecuteScalar(E_id));
+
+            string S_id= $"Select SponsorID From Sponsors Where CompanyName='{CompanyName}';";
+            int Sid = Convert.ToInt32(dbMan.ExecuteScalar(S_id));
+
+            string query = $"Insert INTO Sponsored values('{Eid}','{Sid}','{AmountSponsored}');";
+            int obj = dbMan.ExecuteNonQuery(query);
+            //if (obj == 0)
+            //{
+            //    MessageBox.Show("Couldn't add sponsor");
+            //    return;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Added Sponsor");
+            //    return;
+            //}
+        }
 
         public void TerminateConnection()
         {
