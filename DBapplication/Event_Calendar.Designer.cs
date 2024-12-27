@@ -1,4 +1,4 @@
-﻿namespace DBapplication
+namespace DBapplication
 {
     partial class Event_Calendar
     {
@@ -526,7 +526,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel9
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;

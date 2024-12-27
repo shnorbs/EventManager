@@ -11,7 +11,9 @@ namespace DBapplication
     public class DBManager
     {
 
+
         static string DB_Connection_String = @"Data Source=SHNORBS_LAP\SQLEXPRESS;Initial Catalog=EventManager;Integrated Security=True;Encrypt=False;";
+
 
         SqlConnection myConnection;
 

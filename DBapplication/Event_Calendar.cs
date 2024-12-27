@@ -52,6 +52,12 @@ namespace DBapplication
             }
         }
 
+        private void addEventBtn_Click(object sender, EventArgs e)
+        {
+            AddEvent Fevent= new AddEvent(uID);
+            Fevent.Show();
+        }
+
         private void prev_Click(object sender, EventArgs e)
         {
             if (current_month == 1)
