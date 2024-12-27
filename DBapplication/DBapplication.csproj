@@ -99,6 +99,13 @@
     <Compile Include="Feedback.Designer.cs">
       <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Invites.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminModeSelect.resx">
       <DependentUpon>AdminModeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DayUC.resx">
       <DependentUpon>DayUC.cs</DependentUpon>

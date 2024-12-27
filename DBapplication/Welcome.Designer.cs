@@ -35,6 +35,8 @@
             this.regBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Change_Password = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +62,7 @@
             this.emailBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.ForeColor = System.Drawing.Color.White;
             this.emailBox.Location = new System.Drawing.Point(140, 186);
-            this.emailBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(281, 24);
             this.emailBox.TabIndex = 3;
@@ -72,7 +74,7 @@
             this.passwordBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.passwordBox.ForeColor = System.Drawing.Color.White;
             this.passwordBox.Location = new System.Drawing.Point(140, 252);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(281, 24);
@@ -85,8 +87,8 @@
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(316, 315);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginBtn.Location = new System.Drawing.Point(302, 315);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(104, 43);
             this.loginBtn.TabIndex = 5;
@@ -101,8 +103,8 @@
             this.regBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.regBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.regBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.regBtn.Location = new System.Drawing.Point(204, 315);
-            this.regBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.regBtn.Location = new System.Drawing.Point(190, 315);
+            this.regBtn.Margin = new System.Windows.Forms.Padding(4);
             this.regBtn.Name = "regBtn";
             this.regBtn.Size = new System.Drawing.Size(104, 43);
             this.regBtn.TabIndex = 6;
@@ -115,7 +117,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__1_;
             this.pictureBox2.Location = new System.Drawing.Point(52, 245);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,12 +128,46 @@
             // 
             this.pictureBox1.Image = global::DBapplication.Properties.Resources.output_onlinepngtools;
             this.pictureBox1.Location = new System.Drawing.Point(52, 186);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Brown;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(302, 366);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 43);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Change_Password
+            // 
+            this.Change_Password.BackColor = System.Drawing.Color.Silver;
+            this.Change_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Change_Password.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Change_Password.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Change_Password.ForeColor = System.Drawing.Color.White;
+            this.Change_Password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Change_Password.Location = new System.Drawing.Point(190, 362);
+            this.Change_Password.Margin = new System.Windows.Forms.Padding(4);
+            this.Change_Password.Name = "Change_Password";
+            this.Change_Password.Size = new System.Drawing.Size(104, 47);
+            this.Change_Password.TabIndex = 10;
+            this.Change_Password.Text = "Change Password";
+            this.Change_Password.UseVisualStyleBackColor = false;
+            this.Change_Password.Click += new System.EventHandler(this.Change_Password_Click);
             // 
             // Welcome
             // 
@@ -140,6 +176,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(524, 477);
+            this.Controls.Add(this.Change_Password);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.regBtn);
@@ -147,7 +185,7 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -168,5 +206,7 @@
         private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Change_Password;
     }
 }
