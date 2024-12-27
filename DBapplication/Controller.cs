@@ -149,6 +149,47 @@ namespace DBapplication
             }
         }
 
+        public int AddReminder(string date, int eventID, int userID)
+        {
+            string query = "INSERT INTO Reminds VALUES " +
+                "('" + date + "', " + eventID + ", " + userID + ");";
+            int obj = dbMan.ExecuteNonQuery(query);
+            if (obj == 0)
+            {
+                MessageBox.Show("Reminder Already Exists!");
+                return 0;
+            }
+            else
+            {
+                MessageBox.Show("Reminder Added Successfully!");
+                return 1;
+            }
+        }
+
+        public int AddFeedback(int rating, string date, string comment, int userID, int eventID)
+        {
+            if (comment == "")
+            {
+                string query = "INSERT INTO Feedback (Rating, FB_Date, Comment, UserID, EventID) VALUES " +
+                    "(" + rating + ", '" + date + "', NULL, " + userID + ", " + eventID + ");";
+                return dbMan.ExecuteNonQuery(query);
+            }
+
+            else
+            {
+                string query = "INSERT INTO Feedback (Rating, FB_Date, Comment, UserID, EventID) VALUES " +
+                    "(" + rating + ", '" + date + "', '" + comment + "', " + userID + ", " + eventID + ");";
+                return dbMan.ExecuteNonQuery(query);
+            }
+        }
+
+        public int AddReport(string desc, int userID, int eventID)
+        {
+            string query = "INSERT INTO Report (Handled, Report_Description, Admin_Reply, UserID, AdminID, EventID) VALUES " +
+                "(0, '" + desc + "', NULL, '" + userID + "', NULL, " + eventID + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         public void AddTickets(string TicketType,float price,int NumberofTickets,string EventName)
         {
             string eventid = $"SELECT EventID FROM EventT Where EventName='{EventName}';";

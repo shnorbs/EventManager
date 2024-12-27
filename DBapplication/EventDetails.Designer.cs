@@ -39,9 +39,9 @@
             this.venueName = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.reportBtn = new System.Windows.Forms.PictureBox();
             this.reminderBtn = new System.Windows.Forms.Button();
             this.feedbackBtn = new System.Windows.Forms.Button();
+            this.reportBtn = new System.Windows.Forms.PictureBox();
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportBtn)).BeginInit();
             this.SuspendLayout();
@@ -181,17 +181,6 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Description:";
             // 
-            // reportBtn
-            // 
-            this.reportBtn.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__8_;
-            this.reportBtn.Location = new System.Drawing.Point(536, 22);
-            this.reportBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.reportBtn.Name = "reportBtn";
-            this.reportBtn.Size = new System.Drawing.Size(61, 47);
-            this.reportBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.reportBtn.TabIndex = 15;
-            this.reportBtn.TabStop = false;
-            // 
             // reminderBtn
             // 
             this.reminderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
@@ -220,6 +209,19 @@
             this.feedbackBtn.TabIndex = 17;
             this.feedbackBtn.Text = "Give Feedback";
             this.feedbackBtn.UseVisualStyleBackColor = false;
+            this.feedbackBtn.Click += new System.EventHandler(this.feedbackBtn_Click);
+            // 
+            // reportBtn
+            // 
+            this.reportBtn.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__8_;
+            this.reportBtn.Location = new System.Drawing.Point(536, 22);
+            this.reportBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.reportBtn.Name = "reportBtn";
+            this.reportBtn.Size = new System.Drawing.Size(61, 47);
+            this.reportBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reportBtn.TabIndex = 15;
+            this.reportBtn.TabStop = false;
+            this.reportBtn.Click += new System.EventHandler(this.reportBtn_Click);
             // 
             // PublicEventDetails
             // 
