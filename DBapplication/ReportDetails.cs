@@ -24,7 +24,7 @@ namespace DBapplication
         }
 
         private void ReportDetails_Load(object sender, EventArgs e)
-        {
+        {   
             string eventName = controllerObj.getReportedEventName(reportID);
             EventNameBox.Text = eventName;
 

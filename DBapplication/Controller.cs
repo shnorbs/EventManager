@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Collections;
 
 namespace DBapplication
 {
@@ -82,21 +83,31 @@ namespace DBapplication
         }
 
         public DataTable ShowReports (string filter) 
-        {
-            string query = "SELECT R.Report_ID, R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
+        {   if (filter != "Deleted")
+            {
+                string query = "SELECT R.Report_ID, R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
                            "FROM Report AS R " +
                            "JOIN EventT AS E ON R.EventID = E.EventID"; // default query for "All"
 
-            if (filter == "Handled")
-            {
-                query += " WHERE R.Handled = 1";
-            }
-            else if (filter == "Unhandled")
-            {
-                query += " WHERE R.Handled = 0";
-            }
+                if (filter == "Handled")
+                {
+                    query += " WHERE R.Handled = 1";
+                }
+                else if (filter == "Unhandled")
+                {
+                    query += " WHERE R.Handled = 0";
+                }
 
-            return dbMan.ExecuteReader(query);
+                return dbMan.ExecuteReader(query);
+            }
+            else
+            {
+                string query = "SELECT R.Report_ID, R.Handled, R.Report_Description, R.Admin_Reply " +
+                           "FROM Report AS R Where EventID=NULL;";
+                           
+
+                return dbMan.ExecuteReader(query);
+            }
         }
 
         public string getReportedEventName (int reportID)
