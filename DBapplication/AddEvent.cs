@@ -21,10 +21,6 @@ namespace DBapplication
         {
             InitializeComponent();
             userID = uID;
-            //DataTable dt = controllerObj.SelectEventType();
-            //EventType_combobox.DataSource = dt;
-            //EventType_combobox.DisplayMember = "Etype";
-            //EventType_combobox.ValueMember = "Etype";
             DataTable dt1 = controllerObj.SelectLocation();
             Location_combobox.DataSource = dt1;
             Location_combobox.DisplayMember = "Venue_Name";
@@ -124,6 +120,12 @@ namespace DBapplication
                 float Sprice = (float)Convert.ToDouble(ServicesDataGrid.Rows[i].Cells[2].Value);
                 controllerObj.AddService(ServiceName, ServiceType, Sprice);
                 controllerObj.BookService(ServiceName,EventName,EventDate,Sprice);
+            }
+
+            if(Private_checkbox.Checked)
+            {
+                Invites Fi = new Invites(EventName);
+                Fi.Show();
             }
         }
 

@@ -237,7 +237,34 @@ namespace DBapplication
             }
         }
 
+        public DataTable GetUsers()
+        {
+            DataTable dt = new DataTable();
+            string query = $"Select First_Name,Last_Name,Email,Phone_Number From Users;";
+            dt=dbMan.ExecuteReader(query);
+            return dt;
+        }
 
+        public void AddInvite(string email,string Ename,int RSVP)
+        {
+            string E_id= $"SELECT EventID FROM EventT Where EventName='{Ename}';";
+            int Eid = Convert.ToInt32(dbMan.ExecuteScalar(E_id));
+            string U_id = $"SELECT UserID FROM Users Where Email='{email}';";
+            int Uid = Convert.ToInt32(dbMan.ExecuteScalar(U_id));
+
+            string query = $"Insert Into Invites Values('{Uid}','{Eid}','{RSVP}');";
+            int obj = dbMan.ExecuteNonQuery(query);
+            if (obj == 0)
+            {
+                MessageBox.Show("Couldn't Finish Invites");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Added Invite");
+                return;
+            }
+        }
 
 
         public DataTable LoadReports ()
