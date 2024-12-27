@@ -74,6 +74,11 @@ namespace DBapplication
             string query = "select UserType from Users u where u.Email = '" + email + "' AND u.Password = '" + pass + "';";
             return (string)dbMan.ExecuteScalar(query);
         }
+        public string getUserTypeByUserID(int userID)
+        {
+            string query = "SELECT UserType FROM Users u WHERE u.UserID = " + userID + ";";
+            return (string)dbMan.ExecuteScalar(query);
+        }
 
         public int FindCountPrivateToday(int uID, string date)
         {
@@ -333,6 +338,69 @@ namespace DBapplication
 
             return dbMan.ExecuteReader(query);
         }
+        public DataTable SelectTicketType(int EventID)
+        {
+         
+            string query = "Select T.Ticket_Type  from Tickets T, EventT E where  T.EventID=E.EventID AND T.EventID="+EventID+";";
+            return dbMan.ExecuteReader(query);
+        }
+        public int InsertIntoBuys(string ticketType, int eventID, int userID, DateTime purchaseDate,  int quantity)
+        {
+            string query = "INSERT INTO Buys (Ticket_Type, EventID, UserID, Purchase_Date,Quantity) " +
+                           "VALUES ('" + ticketType + "', " + eventID + ", " + userID + ", '" + purchaseDate.ToString("yyyy-MM-dd") +"', " + quantity + ");";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int GetTicketCount(string ticketType, int eventID)
+        {
+            string query = "SELECT Ticket_Count FROM Tickets " +
+                           "WHERE Ticket_Type = '" + ticketType + "' AND EventID = " + eventID + ";";
+
+            DataTable dt = dbMan.ExecuteReader(query);
+            if (dt.Rows.Count > 0)
+            {
+                return Convert.ToInt32(dt.Rows[0]["Ticket_Count"]); // Return the ticket count
+            }
+            else
+            {
+                return -1; // Return -1 if no matching record is found
+            }
+        }
+        public int UpdateTicketCount(string ticketType, int eventID, int newCount)
+        {
+            string query = "UPDATE Tickets " +
+                           "SET Ticket_Count = " + newCount + " " +
+                           "WHERE Ticket_Type = '" + ticketType + "' AND EventID = " + eventID + ";";
+
+            return dbMan.ExecuteNonQuery(query); // Return the number of rows affected
+        }
+        public int Find_if_tickets(string ticketType, int eventID, int newCount)
+        {
+            string query = "UPDATE Tickets " +
+                           "SET Ticket_Count = " + newCount + " " +
+                           "WHERE Ticket_Type = '" + ticketType + "' AND EventID = " + eventID + ";";
+
+            return dbMan.ExecuteNonQuery(query); // Return the number of rows affected
+        }
+        public bool Find_if_tickets(int eventID)
+        {
+            string query = "SELECT COUNT(*) FROM Tickets " +
+                           "WHERE EventID = " + eventID + ";";
+
+            // Execute the query
+            DataTable dt = dbMan.ExecuteReader(query);
+
+            // Check if a matching record exists
+            if (dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0][0]) > 0)
+            {
+                return true; // Record exists
+            }
+            else
+            {
+                return false; // No matching record found
+            }
+        }
+
 
         public void AddSponsor(string CompanyName,string EventName)
         {
