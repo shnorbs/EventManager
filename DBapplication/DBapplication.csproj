@@ -87,6 +87,12 @@
     <Compile Include="Admin_Addition.Designer.cs">
       <DependentUpon>Admin_Addition.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDetails.Designer.cs">
+      <DependentUpon>ReportDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Statstics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMode.resx">
       <DependentUpon>AdminMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDetails.resx">
+      <DependentUpon>ReportDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Statstics.resx">
       <DependentUpon>Statstics.cs</DependentUpon>
