@@ -246,6 +246,10 @@
             this.specCombo.ForeColor = System.Drawing.Color.Gray;
             this.specCombo.FormattingEnabled = true;
             this.specCombo.Items.AddRange(new object[] {
+            "Weddings",
+            "Conferences",
+            "Concerts",
+            "Parties",
             "Charity Events",
             "Concerts",
             "Conferences",
@@ -295,6 +299,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.fnameBox);
             this.Controls.Add(this.lnameBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.passBox);
             this.Controls.Add(this.pictureBox4);
             this.ForeColor = System.Drawing.Color.White;
@@ -322,6 +328,9 @@
         private System.Windows.Forms.TextBox numberBox;
         private System.Windows.Forms.TextBox lnameBox;
         private System.Windows.Forms.TextBox passBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox lnameBox;
         private System.Windows.Forms.TextBox fnameBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox emailBox;

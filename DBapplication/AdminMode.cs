@@ -13,9 +13,11 @@ namespace DBapplication
     public partial class AdminMode : Form
     {
         Controller controllerObj;
-        public AdminMode()
+        int ID;
+        public AdminMode(int adminID)
         {
             InitializeComponent();
+            ID = adminID;
         }
 
         private void AdminMode_Load(object sender, EventArgs e)
@@ -39,6 +41,28 @@ namespace DBapplication
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int reportId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Report_ID"].Value);
+            bool handledValue = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["Handled"].Value);
+            ReportDetails form = new ReportDetails(reportId, handledValue, ID);
+            form.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin_Addition table = new Admin_Addition();
+            table.Show();
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Statstics form = new Statstics();
+            form.Show();
+
         }
     }
 }

@@ -112,6 +112,30 @@
     <Compile Include="Invites.Designer.cs">
       <DependentUpon>Invites.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Addition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Addition.Designer.cs">
+      <DependentUpon>Admin_Addition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemindersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemindersList.Designer.cs">
+      <DependentUpon>RemindersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDetails.Designer.cs">
+      <DependentUpon>ReportDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statstics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statstics.Designer.cs">
+      <DependentUpon>Statstics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs">
@@ -153,6 +177,9 @@
     <EmbeddedResource Include="AdminModeSelect.resx">
       <DependentUpon>AdminModeSelect.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Addition.resx">
+      <DependentUpon>Admin_Addition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +194,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMode.resx">
       <DependentUpon>AdminMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemindersList.resx">
+      <DependentUpon>RemindersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDetails.resx">
+      <DependentUpon>ReportDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statstics.resx">
+      <DependentUpon>Statstics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Feedback.resx">
       <DependentUpon>Feedback.cs</DependentUpon>

@@ -374,7 +374,7 @@ namespace DBapplication
             // monthLabel
             // 
             this.monthLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
-            this.monthLabel.Font = new System.Drawing.Font("Segoe UI Variable Display", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthLabel.ForeColor = System.Drawing.Color.White;
             this.monthLabel.Location = new System.Drawing.Point(15, 6);
             this.monthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -385,7 +385,7 @@ namespace DBapplication
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(17, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -398,7 +398,7 @@ namespace DBapplication
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(252, 151);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -410,7 +410,7 @@ namespace DBapplication
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(487, 151);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -422,7 +422,7 @@ namespace DBapplication
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(956, 151);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -434,7 +434,7 @@ namespace DBapplication
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(721, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -446,7 +446,7 @@ namespace DBapplication
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(1191, 151);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -458,7 +458,7 @@ namespace DBapplication
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(1425, 151);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -506,6 +506,7 @@ namespace DBapplication
             this.remindersBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.remindersBtn.TabIndex = 12;
             this.remindersBtn.TabStop = false;
+            this.remindersBtn.Click += new System.EventHandler(this.remindersBtn_Click);
             // 
             // next
             // 
