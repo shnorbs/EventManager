@@ -35,7 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.numberBox = new System.Windows.Forms.TextBox();
-            this.lnameBox = new System.Windows.Forms.TextBox();
+            
             this.passBox = new System.Windows.Forms.TextBox();
             this.fnameBox = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -43,7 +43,7 @@
             this.specBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.specCombo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -330,13 +330,13 @@
         private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox lnameBox;
+       
         private System.Windows.Forms.TextBox fnameBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.TextBox specBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox specCombo;
-        private System.Windows.Forms.Label label1;
+     
     }
 }

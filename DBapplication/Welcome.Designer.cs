@@ -35,7 +35,6 @@
             this.regBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.Change_Password = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,35 +134,18 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Brown;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(302, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 43);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Change_Password
             // 
-            this.Change_Password.BackColor = System.Drawing.Color.Silver;
+            this.Change_Password.BackColor = System.Drawing.Color.BurlyWood;
             this.Change_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Change_Password.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Change_Password.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_Password.ForeColor = System.Drawing.Color.White;
             this.Change_Password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Change_Password.Location = new System.Drawing.Point(190, 362);
+            this.Change_Password.Location = new System.Drawing.Point(246, 366);
             this.Change_Password.Margin = new System.Windows.Forms.Padding(4);
             this.Change_Password.Name = "Change_Password";
-            this.Change_Password.Size = new System.Drawing.Size(104, 47);
+            this.Change_Password.Size = new System.Drawing.Size(104, 54);
             this.Change_Password.TabIndex = 10;
             this.Change_Password.Text = "Change Password";
             this.Change_Password.UseVisualStyleBackColor = false;
@@ -177,7 +159,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(524, 477);
             this.Controls.Add(this.Change_Password);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.regBtn);
@@ -206,7 +187,6 @@
         private System.Windows.Forms.Button regBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Change_Password;
     }
 }

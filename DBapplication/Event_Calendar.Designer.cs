@@ -73,6 +73,7 @@ namespace DBapplication
             this.remindersBtn = new System.Windows.Forms.PictureBox();
             this.next = new System.Windows.Forms.PictureBox();
             this.prev = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addEventBtn)).BeginInit();
@@ -115,7 +116,7 @@ namespace DBapplication
             this.flowLayoutPanel1.Controls.Add(this.panel30);
             this.flowLayoutPanel1.Controls.Add(this.panel31);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 209);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1643, 961);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -123,7 +124,7 @@ namespace DBapplication
             // panel10
             // 
             this.panel10.Location = new System.Drawing.Point(4, 4);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(227, 185);
             this.panel10.TabIndex = 1;
@@ -131,7 +132,7 @@ namespace DBapplication
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(239, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 185);
             this.panel1.TabIndex = 2;
@@ -139,7 +140,7 @@ namespace DBapplication
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(474, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 185);
             this.panel2.TabIndex = 3;
@@ -147,7 +148,7 @@ namespace DBapplication
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(709, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(227, 185);
             this.panel3.TabIndex = 4;
@@ -155,7 +156,7 @@ namespace DBapplication
             // panel4
             // 
             this.panel4.Location = new System.Drawing.Point(944, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(227, 185);
             this.panel4.TabIndex = 5;
@@ -163,7 +164,7 @@ namespace DBapplication
             // panel5
             // 
             this.panel5.Location = new System.Drawing.Point(1179, 4);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(227, 185);
             this.panel5.TabIndex = 6;
@@ -171,7 +172,7 @@ namespace DBapplication
             // panel6
             // 
             this.panel6.Location = new System.Drawing.Point(4, 197);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(227, 185);
             this.panel6.TabIndex = 7;
@@ -179,7 +180,7 @@ namespace DBapplication
             // panel7
             // 
             this.panel7.Location = new System.Drawing.Point(239, 197);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(227, 185);
             this.panel7.TabIndex = 8;
@@ -187,7 +188,7 @@ namespace DBapplication
             // panel8
             // 
             this.panel8.Location = new System.Drawing.Point(474, 197);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(227, 185);
             this.panel8.TabIndex = 9;
@@ -196,7 +197,7 @@ namespace DBapplication
             // panel9
             // 
             this.panel9.Location = new System.Drawing.Point(709, 197);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(227, 185);
             this.panel9.TabIndex = 10;
@@ -204,7 +205,7 @@ namespace DBapplication
             // panel11
             // 
             this.panel11.Location = new System.Drawing.Point(944, 197);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(227, 185);
             this.panel11.TabIndex = 11;
@@ -212,7 +213,7 @@ namespace DBapplication
             // panel12
             // 
             this.panel12.Location = new System.Drawing.Point(1179, 197);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(227, 185);
             this.panel12.TabIndex = 12;
@@ -220,7 +221,7 @@ namespace DBapplication
             // panel13
             // 
             this.panel13.Location = new System.Drawing.Point(4, 390);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(227, 185);
             this.panel13.TabIndex = 13;
@@ -228,7 +229,7 @@ namespace DBapplication
             // panel14
             // 
             this.panel14.Location = new System.Drawing.Point(239, 390);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(227, 185);
             this.panel14.TabIndex = 14;
@@ -237,7 +238,7 @@ namespace DBapplication
             // panel15
             // 
             this.panel15.Location = new System.Drawing.Point(474, 390);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(227, 185);
             this.panel15.TabIndex = 15;
@@ -245,7 +246,7 @@ namespace DBapplication
             // panel16
             // 
             this.panel16.Location = new System.Drawing.Point(709, 390);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(227, 185);
             this.panel16.TabIndex = 16;
@@ -253,7 +254,7 @@ namespace DBapplication
             // panel17
             // 
             this.panel17.Location = new System.Drawing.Point(944, 390);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(227, 185);
             this.panel17.TabIndex = 17;
@@ -261,7 +262,7 @@ namespace DBapplication
             // panel18
             // 
             this.panel18.Location = new System.Drawing.Point(1179, 390);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(227, 185);
             this.panel18.TabIndex = 18;
@@ -269,7 +270,7 @@ namespace DBapplication
             // panel19
             // 
             this.panel19.Location = new System.Drawing.Point(4, 583);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(227, 185);
             this.panel19.TabIndex = 19;
@@ -277,7 +278,7 @@ namespace DBapplication
             // panel20
             // 
             this.panel20.Location = new System.Drawing.Point(239, 583);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(227, 185);
             this.panel20.TabIndex = 20;
@@ -286,7 +287,7 @@ namespace DBapplication
             // panel21
             // 
             this.panel21.Location = new System.Drawing.Point(474, 583);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(227, 185);
             this.panel21.TabIndex = 21;
@@ -294,7 +295,7 @@ namespace DBapplication
             // panel22
             // 
             this.panel22.Location = new System.Drawing.Point(709, 583);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(227, 185);
             this.panel22.TabIndex = 22;
@@ -302,7 +303,7 @@ namespace DBapplication
             // panel23
             // 
             this.panel23.Location = new System.Drawing.Point(944, 583);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(227, 185);
             this.panel23.TabIndex = 23;
@@ -310,7 +311,7 @@ namespace DBapplication
             // panel24
             // 
             this.panel24.Location = new System.Drawing.Point(1179, 583);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(227, 185);
             this.panel24.TabIndex = 24;
@@ -318,7 +319,7 @@ namespace DBapplication
             // panel25
             // 
             this.panel25.Location = new System.Drawing.Point(4, 776);
-            this.panel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(227, 185);
             this.panel25.TabIndex = 25;
@@ -326,7 +327,7 @@ namespace DBapplication
             // panel26
             // 
             this.panel26.Location = new System.Drawing.Point(239, 776);
-            this.panel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(227, 185);
             this.panel26.TabIndex = 26;
@@ -334,7 +335,7 @@ namespace DBapplication
             // panel27
             // 
             this.panel27.Location = new System.Drawing.Point(474, 776);
-            this.panel27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel27.Margin = new System.Windows.Forms.Padding(4);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(227, 185);
             this.panel27.TabIndex = 27;
@@ -342,7 +343,7 @@ namespace DBapplication
             // panel28
             // 
             this.panel28.Location = new System.Drawing.Point(709, 776);
-            this.panel28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel28.Margin = new System.Windows.Forms.Padding(4);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(227, 185);
             this.panel28.TabIndex = 28;
@@ -350,7 +351,7 @@ namespace DBapplication
             // panel29
             // 
             this.panel29.Location = new System.Drawing.Point(944, 776);
-            this.panel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(227, 185);
             this.panel29.TabIndex = 29;
@@ -358,7 +359,7 @@ namespace DBapplication
             // panel30
             // 
             this.panel30.Location = new System.Drawing.Point(1179, 776);
-            this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(227, 185);
             this.panel30.TabIndex = 30;
@@ -366,7 +367,7 @@ namespace DBapplication
             // panel31
             // 
             this.panel31.Location = new System.Drawing.Point(4, 969);
-            this.panel31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel31.Margin = new System.Windows.Forms.Padding(4);
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(227, 185);
             this.panel31.TabIndex = 31;
@@ -472,13 +473,14 @@ namespace DBapplication
             // 
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel32.Controls.Add(this.button1);
             this.panel32.Controls.Add(this.addEventBtn);
             this.panel32.Controls.Add(this.remindersBtn);
             this.panel32.Controls.Add(this.next);
             this.panel32.Controls.Add(this.prev);
             this.panel32.Controls.Add(this.monthLabel);
             this.panel32.Location = new System.Drawing.Point(-1, 0);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(1721, 134);
             this.panel32.TabIndex = 12;
@@ -512,7 +514,7 @@ namespace DBapplication
             // 
             this.next.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__2_;
             this.next.Location = new System.Drawing.Point(287, 57);
-            this.next.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(71, 58);
             this.next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -524,13 +526,30 @@ namespace DBapplication
             // 
             this.prev.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__2___1_;
             this.prev.Location = new System.Drawing.Point(201, 57);
-            this.prev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prev.Margin = new System.Windows.Forms.Padding(4);
             this.prev.Name = "prev";
             this.prev.Size = new System.Drawing.Size(79, 58);
             this.prev.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.prev.TabIndex = 3;
             this.prev.TabStop = false;
             this.prev.Click += new System.EventHandler(this.prev_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1420, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(232, 53);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Event_Calendar
             // 
@@ -547,7 +566,7 @@ namespace DBapplication
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel32);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Event_Calendar";
             this.Text = "Event_Calendar";
             this.Load += new System.EventHandler(this.Event_Calendar_Load);
@@ -608,5 +627,6 @@ namespace DBapplication
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.PictureBox remindersBtn;
         private System.Windows.Forms.PictureBox addEventBtn;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -257,7 +257,7 @@
             this.AddVenue_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.AddVenue_button.ForeColor = System.Drawing.Color.White;
             this.AddVenue_button.Location = new System.Drawing.Point(528, 140);
-            this.AddVenue_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddVenue_button.Margin = new System.Windows.Forms.Padding(4);
             this.AddVenue_button.Name = "AddVenue_button";
             this.AddVenue_button.Size = new System.Drawing.Size(121, 47);
             this.AddVenue_button.TabIndex = 18;
@@ -285,12 +285,11 @@
             this.Tprice_column,
             this.Number_of_tickets_column});
             this.TicketsDataGrid.Location = new System.Drawing.Point(387, 505);
-            this.TicketsDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TicketsDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.TicketsDataGrid.Name = "TicketsDataGrid";
             this.TicketsDataGrid.RowHeadersWidth = 51;
             this.TicketsDataGrid.Size = new System.Drawing.Size(457, 124);
             this.TicketsDataGrid.TabIndex = 20;
-          
             // 
             // TicketType_column
             // 
@@ -333,7 +332,7 @@
             this.ServiceType_column,
             this.Price_column});
             this.ServicesDataGrid.Location = new System.Drawing.Point(387, 316);
-            this.ServicesDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServicesDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.ServicesDataGrid.Name = "ServicesDataGrid";
             this.ServicesDataGrid.RowHeadersWidth = 51;
             this.ServicesDataGrid.Size = new System.Drawing.Size(457, 113);
@@ -367,7 +366,7 @@
             this.Refresh_Button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Refresh_Button.ForeColor = System.Drawing.Color.White;
             this.Refresh_Button.Location = new System.Drawing.Point(60, 215);
-            this.Refresh_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Refresh_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Refresh_Button.Name = "Refresh_Button";
             this.Refresh_Button.Size = new System.Drawing.Size(105, 37);
             this.Refresh_Button.TabIndex = 25;
@@ -386,7 +385,7 @@
             this.panel1.Controls.Add(this.EndTime_label);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(60, 375);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 253);
             this.panel1.TabIndex = 26;
@@ -418,7 +417,7 @@
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel32.Location = new System.Drawing.Point(0, -6);
-            this.panel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(1721, 70);
             this.panel32.TabIndex = 27;
@@ -428,7 +427,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(0, 747);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1721, 84);
             this.panel3.TabIndex = 28;
@@ -451,9 +450,9 @@
             this.AddSponsor_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddSponsor_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddSponsor_button.ForeColor = System.Drawing.Color.White;
-            this.AddSponsor_button.Location = new System.Drawing.Point(379, 535);
+            this.AddSponsor_button.Location = new System.Drawing.Point(386, 647);
             this.AddSponsor_button.Name = "AddSponsor_button";
-            this.AddSponsor_button.Size = new System.Drawing.Size(125, 50);
+            this.AddSponsor_button.Size = new System.Drawing.Size(194, 50);
             this.AddSponsor_button.TabIndex = 30;
             this.AddSponsor_button.Text = "Add Sponsor";
             this.AddSponsor_button.UseVisualStyleBackColor = false;
@@ -464,7 +463,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(674, 668);
+            this.ClientSize = new System.Drawing.Size(842, 796);
             this.Controls.Add(this.AddSponsor_button);
             this.Controls.Add(this.AddEvent_button);
             this.Controls.Add(this.panel3);

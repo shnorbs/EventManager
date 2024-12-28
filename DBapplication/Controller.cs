@@ -94,12 +94,7 @@ namespace DBapplication
             string query = "UPDATE Users SET Password = '" + newPassword + "' WHERE Email = '" + email + "';";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int AddUser(string Fname, string Type, string Email, string Pass, float number)
-        {
-            string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +
-                "('" + Fname + "', NULL, '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, NULL);";
-            return dbMan.ExecuteNonQuery(query);
-        }
+    
 
         public int getUserID(string email, string pass)
         {
@@ -135,8 +130,192 @@ namespace DBapplication
             string query = "select E.EventName AS [Event Name], E.Start_Time AS [Starts At], E.End_Time AS [Ends At], V.Venue_Name AS [Venue Name]  from EventT E, Venue V where E.Location = V.Venue_ID AND E.Edate = '" + date + "' AND E.Privacy_Status = 0;";
             return dbMan.ExecuteReader(query);
         }
-        
+        ///Statsitcs Functions
+        /// Statistical Functions
+        public DataTable Average_Feedback_Rating()
+        {
+            string query = "SELECT E.EventName, AVG(F.Rating) AS AverageRating " +
+                           "FROM Feedback F " +
+                           "JOIN EventT E ON F.EventID = E.EventID " +
+                           "GROUP BY E.EventName " +
+                           "ORDER BY AverageRating DESC;";
+            return dbMan.ExecuteReader(query);
+        }
 
+        public DataTable Total_Revenue_By_Event()
+        {
+            string query = "SELECT E.EventName, SUM(T.Price * T.Ticket_Count) AS TotalRevenue " +
+                           "FROM Tickets T " +
+                           "JOIN EventT E ON T.EventID = E.EventID " +
+                           "GROUP BY E.EventName " +
+                           "ORDER BY TotalRevenue DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Attendance_Trends_By_Month()
+        {
+            string query = "SELECT MONTH(E.Edate) AS Month, COUNT(A.UserID) AS AttendanceCount " +
+                           "FROM Attending A " +
+                           "JOIN EventT E ON A.EventID = E.EventID " +
+                           "GROUP BY MONTH(E.Edate) " +
+                           "ORDER BY Month;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Ticket_Price_Variance()
+        {
+            string query = "SELECT E.EventName, VAR(T.Price) AS PriceVariance " +
+                           "FROM Tickets T " +
+                           "JOIN EventT E ON T.EventID = E.EventID " +
+                           "GROUP BY E.EventName " +
+                           "ORDER BY PriceVariance DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Events_Grouped_By_Type()
+        {
+            string query = "SELECT E.Etype AS EventType, COUNT(A.UserID) AS TotalAttendance " +
+                           "FROM EventT E " +
+                           "JOIN Attending A ON E.EventID = A.EventID " +
+                           "GROUP BY E.Etype " +
+                           "ORDER BY TotalAttendance DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Profit_Gained_By_Organizer()
+        {
+            string query = "SELECT U.First_Name + ' ' + U.Last_Name AS OrganizerName, SUM(T.Price * T.Ticket_Count) AS TotalProfit " +
+                           "FROM Users U " +
+                           "JOIN EventT E ON U.UserID = E.Organizer " +
+                           "JOIN Tickets T ON E.EventID = T.EventID " +
+                           "WHERE U.UserType = 'Organizer' " +
+                           "GROUP BY U.First_Name, U.Last_Name " +
+                           "ORDER BY TotalProfit DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Events_Without_Feedback()
+        {
+            string query = "SELECT E.EventName " +
+                           "FROM EventT E " +
+                           "LEFT JOIN Feedback F ON E.EventID = F.EventID " +
+                           "WHERE F.EventID IS NULL " +
+                           "ORDER BY E.EventName;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Revenue_By_Event_Type()
+        {
+            string query = "SELECT E.Etype AS EventType, SUM(T.Price * T.Ticket_Count) AS TotalRevenue " +
+                           "FROM EventT E " +
+                           "JOIN Tickets T ON E.EventID = T.EventID " +
+                           "GROUP BY E.Etype " +
+                           "ORDER BY TotalRevenue DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+       
+
+        public DataTable Feedback_Summary_By_Event()
+        {
+            string query = "SELECT E.EventName, " +
+                           "SUM(CASE WHEN F.Rating >= 4 THEN 1 ELSE 0 END) AS PositiveFeedback, " +
+                           "SUM(CASE WHEN F.Rating < 4 THEN 1 ELSE 0 END) AS NegativeFeedback " +
+                           "FROM EventT E " +
+                           "LEFT JOIN Feedback F ON E.EventID = F.EventID " +
+                           "GROUP BY E.EventName " +
+                           "ORDER BY E.EventName;";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+        /// Managerial Functions
+        public DataTable Total_Tickets_Sold()
+        {
+            string query = "SELECT SUM(T.Ticket_Count) AS TotalTicketsSold " +
+                           "FROM Tickets T;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Average_Revenue_Per_Event()
+        {
+            string query = "SELECT AVG(T.Price * T.Ticket_Count) AS AverageRevenue " +
+                           "FROM Tickets T " +
+                           "JOIN EventT E ON T.EventID = E.EventID;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Most_Popular_Event_By_Sales()
+        {
+            string query = "SELECT TOP 1 E.EventName, SUM(T.Ticket_Count) AS TotalTickets " +
+                           "FROM Tickets T " +
+                           "JOIN EventT E ON T.EventID = E.EventID " +
+                           "GROUP BY E.EventName " +
+                           "ORDER BY TotalTickets DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Min_Max_Attendance_Per_Event()
+        {
+            string query = "SELECT MIN(A.UserID) AS MinAttendance, MAX(A.UserID) AS MaxAttendance, E.EventName " +
+                           "FROM Attending A " +
+                           "JOIN EventT E ON A.EventID = E.EventID " +
+                           "GROUP BY E.EventName;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Total_Revenue()
+        {
+            string query = "SELECT SUM(T.Price * T.Ticket_Count) AS TotalRevenue " +
+                           "FROM Tickets T;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Most_Profitable_Organizer()
+        {
+            string query = "SELECT TOP 1 U.First_Name + ' ' + U.Last_Name AS OrganizerName, SUM(T.Price * T.Ticket_Count) AS TotalRevenue " +
+                           "FROM Users U " +
+                           "JOIN EventT E ON U.UserID = E.Organizer " +
+                           "JOIN Tickets T ON E.EventID = T.EventID " +
+                           "WHERE U.UserType = 'Organizer' " +
+                           "GROUP BY U.First_Name, U.Last_Name " +
+                           "ORDER BY TotalRevenue DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Total_Events_By_Type()
+        {
+            string query = "SELECT E.Etype AS EventType, COUNT(E.EventID) AS TotalEvents " +
+                           "FROM EventT E " +
+                           "GROUP BY E.Etype " +
+                           "ORDER BY TotalEvents DESC;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Average_Feedback_Rating_All_Events()
+        {
+            string query = "SELECT AVG(F.Rating) AS AverageRating " +
+                           "FROM Feedback F;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Total_Users_Registered()
+        {
+            string query = "SELECT COUNT(U.UserID) AS TotalUsers " +
+                           "FROM Users U;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable Number_Of_Events_Per_Organizer()
+        {
+            string query = "SELECT U.First_Name + ' ' + U.Last_Name AS OrganizerName, COUNT(E.EventID) AS TotalEvents " +
+                           "FROM Users U " +
+                           "JOIN EventT E ON U.UserID = E.Organizer " +
+                           "WHERE U.UserType = 'Organizer' " +
+                           "GROUP BY U.First_Name, U.Last_Name " +
+                           "ORDER BY TotalEvents DESC;";
+            return dbMan.ExecuteReader(query);
+        }
 
         public DataTable FindPrivateEventsToday(int uID, string date)
         {

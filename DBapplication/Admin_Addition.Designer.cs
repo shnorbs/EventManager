@@ -39,7 +39,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.DimGray;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(49, 72);
+            this.textBox1.Location = new System.Drawing.Point(342, 69);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(123, 15);
             this.textBox1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(46, 43);
+            this.label1.Location = new System.Drawing.Point(339, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
             this.label1.TabIndex = 2;
@@ -59,7 +59,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-16, 183);
+            this.dataGridView1.Location = new System.Drawing.Point(245, 183);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -72,7 +72,7 @@
             this.Make_Admin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.Make_Admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Make_Admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.Make_Admin.Location = new System.Drawing.Point(49, 119);
+            this.Make_Admin.Location = new System.Drawing.Point(342, 119);
             this.Make_Admin.Name = "Make_Admin";
             this.Make_Admin.Size = new System.Drawing.Size(123, 58);
             this.Make_Admin.TabIndex = 1;

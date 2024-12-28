@@ -58,16 +58,7 @@ namespace DBapplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            {
-                Form form = Application.OpenForms[i];
-
-                
-                if (form.Name != "Welcome") 
-                {
-                    form.Close();
-                }
-            }
+           
         }
 
         private void Change_Password_Click(object sender, EventArgs e)

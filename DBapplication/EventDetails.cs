@@ -47,7 +47,11 @@ namespace DBapplication
                 Buy.Enabled = false;
                 Buy.Visible = false;
                 Ticket_Type.Enabled = false;
-                Ticket_Type.Enabled = false;
+                Ticket_Type.Visible = false;
+                button2.Enabled = false;
+                button2.Visible = false;
+                button1.Enabled = false;
+                button1.Visible = false;
                 if (type == "Organizer")
                 {
                     Invites.Enabled = true;
