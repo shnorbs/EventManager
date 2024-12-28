@@ -44,10 +44,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DBapplication.Properties.Resources.output_onlinepngtools;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 68);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 56);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -58,20 +57,18 @@
             this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.ForeColor = System.Drawing.Color.White;
-            this.emailBox.Location = new System.Drawing.Point(157, 69);
-            this.emailBox.Margin = new System.Windows.Forms.Padding(4);
+            this.emailBox.Location = new System.Drawing.Point(118, 56);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(281, 24);
+            this.emailBox.Size = new System.Drawing.Size(211, 20);
             this.emailBox.TabIndex = 8;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::DBapplication.Properties.Resources.output_onlinepngtools__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 111);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(29, 90);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -82,11 +79,10 @@
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.passwordBox.ForeColor = System.Drawing.Color.White;
-            this.passwordBox.Location = new System.Drawing.Point(157, 111);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
+            this.passwordBox.Location = new System.Drawing.Point(118, 90);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(281, 24);
+            this.passwordBox.Size = new System.Drawing.Size(211, 20);
             this.passwordBox.TabIndex = 10;
             // 
             // NewPasswordbox
@@ -95,11 +91,10 @@
             this.NewPasswordbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NewPasswordbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.NewPasswordbox.ForeColor = System.Drawing.Color.White;
-            this.NewPasswordbox.Location = new System.Drawing.Point(157, 159);
-            this.NewPasswordbox.Margin = new System.Windows.Forms.Padding(4);
+            this.NewPasswordbox.Location = new System.Drawing.Point(118, 129);
             this.NewPasswordbox.Name = "NewPasswordbox";
             this.NewPasswordbox.PasswordChar = '*';
-            this.NewPasswordbox.Size = new System.Drawing.Size(281, 24);
+            this.NewPasswordbox.Size = new System.Drawing.Size(211, 20);
             this.NewPasswordbox.TabIndex = 12;
             // 
             // ConfirmPasswordbox
@@ -108,20 +103,20 @@
             this.ConfirmPasswordbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConfirmPasswordbox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
             this.ConfirmPasswordbox.ForeColor = System.Drawing.Color.White;
-            this.ConfirmPasswordbox.Location = new System.Drawing.Point(157, 201);
-            this.ConfirmPasswordbox.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmPasswordbox.Location = new System.Drawing.Point(118, 163);
             this.ConfirmPasswordbox.Name = "ConfirmPasswordbox";
             this.ConfirmPasswordbox.PasswordChar = '*';
-            this.ConfirmPasswordbox.Size = new System.Drawing.Size(281, 24);
+            this.ConfirmPasswordbox.Size = new System.Drawing.Size(211, 20);
             this.ConfirmPasswordbox.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(34, 166);
+            this.label1.Location = new System.Drawing.Point(26, 135);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 15;
             this.label1.Text = " New Password";
             // 
@@ -129,9 +124,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(23, 208);
+            this.label2.Location = new System.Drawing.Point(17, 169);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 16);
+            this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Confirm Password";
             // 
@@ -142,10 +138,9 @@
             this.Change_Password.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_Password.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.Change_Password.Location = new System.Drawing.Point(453, 252);
-            this.Change_Password.Margin = new System.Windows.Forms.Padding(4);
+            this.Change_Password.Location = new System.Drawing.Point(211, 202);
             this.Change_Password.Name = "Change_Password";
-            this.Change_Password.Size = new System.Drawing.Size(148, 40);
+            this.Change_Password.Size = new System.Drawing.Size(118, 32);
             this.Change_Password.TabIndex = 18;
             this.Change_Password.Text = " Change Password";
             this.Change_Password.UseVisualStyleBackColor = true;
@@ -153,10 +148,10 @@
             // 
             // ChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(340, 244);
             this.Controls.Add(this.Change_Password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -166,6 +161,7 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.emailBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChangePassword";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

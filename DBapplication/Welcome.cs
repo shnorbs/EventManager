@@ -45,8 +45,10 @@ namespace DBapplication
 
             else
             {
-                Event_Calendar f = new Event_Calendar(cont.getUserID("org", "org"), cont.getUserType("org", "org"));
-                f.Show();
+                MessageBox.Show("Incorrect Email or Password!");
+                //Event_Calendar f = new Event_Calendar(cont.getUserID("org", "org"), cont.getUserType("org", "org"));
+                //f.Show();
+                return;
             }
 
         }
@@ -58,22 +60,12 @@ namespace DBapplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            {
-                Form form = Application.OpenForms[i];
-
-                
-                if (form.Name != "Welcome") 
-                {
-                    form.Close();
-                }
-            }
+           
         }
 
         private void Change_Password_Click(object sender, EventArgs e)
         {
-            ChangePassword table = new ChangePassword();
-            table.Show();
+            
 
         }
 

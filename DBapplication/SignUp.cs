@@ -19,7 +19,7 @@ namespace DBapplication
         {
             InitializeComponent();
             specBox.Enabled = false;
-            numberBox.MaxLength = 10;
+            numberBox.MaxLength = 11;
 
             emailBox.GotFocus += new EventHandler((sender, e) => RemovePlaceholderText(sender, e, "E-Mail"));
             emailBox.LostFocus += new EventHandler((sender, e) => SetPlaceholderText(sender, e, "E-Mail"));
@@ -30,8 +30,8 @@ namespace DBapplication
             fnameBox.GotFocus += new EventHandler((sender, e) => RemovePlaceholderText(sender, e, "First Name"));
             fnameBox.LostFocus += new EventHandler((sender, e) => SetPlaceholderText(sender, e, "First Name"));
 
-            lnameBox.GotFocus += new EventHandler((sender, e) => RemovePlaceholderText(sender, e, "Last Name"));
-            lnameBox.LostFocus += new EventHandler((sender, e) => SetPlaceholderText(sender, e, "Last Name"));
+            lastnameBox.GotFocus += new EventHandler((sender, e) => RemovePlaceholderText(sender, e, "Last Name"));
+            lastnameBox.LostFocus += new EventHandler((sender, e) => SetPlaceholderText(sender, e, "Last Name"));
 
             numberBox.GotFocus += new EventHandler((sender, e) => RemovePlaceholderText(sender, e, "Phone Number"));
             numberBox.LostFocus += new EventHandler((sender, e) => SetPlaceholderText(sender, e, "Phone Number"));
@@ -72,10 +72,10 @@ namespace DBapplication
 
             if (Normal_User.Checked)
             {
-                if (lnameBox.Text == "")
+                if (lastnameBox.Text == "")
                     cont.AddUser(fnameBox.Text, "Normal_User", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text));
                 else
-                    cont.AddUserWithLastName(fnameBox.Text, lnameBox.Text, "Normal_User", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text));
+                    cont.AddUserWithLastName(fnameBox.Text, lastnameBox.Text, "Normal_User", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text));
 
                 MessageBox.Show("Success!");
                 return;
@@ -83,7 +83,7 @@ namespace DBapplication
 
             if (Organizer.Checked)
             {
-                if(lnameBox.Text == "")
+                if(lastnameBox.Text == "")
                 {
                     if (specCombo.SelectedItem.ToString() == "Other")
                         cont.AddOrganzier(fnameBox.Text, "Organizer", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text), specBox.Text);
@@ -95,10 +95,10 @@ namespace DBapplication
                 else
                 {
                     if (specCombo.SelectedItem.ToString() == "Other")
-                        cont.AddOrganzierWithLastName(fnameBox.Text, lnameBox.Text, "Organizer", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text), specBox.Text);
+                        cont.AddOrganzierWithLastName(fnameBox.Text, lastnameBox.Text, "Organizer", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text), specBox.Text);
 
                     else
-                        cont.AddOrganzierWithLastName(fnameBox.Text, lnameBox.Text, "Organizer", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text), specCombo.SelectedItem.ToString());
+                        cont.AddOrganzierWithLastName(fnameBox.Text, lastnameBox.Text, "Organizer", emailBox.Text, passBox.Text, Int64.Parse(numberBox.Text), specCombo.SelectedItem.ToString());
                 }
 
 
