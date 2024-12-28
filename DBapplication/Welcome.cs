@@ -45,8 +45,10 @@ namespace DBapplication
 
             else
             {
-                Event_Calendar f = new Event_Calendar(cont.getUserID("org", "org"), cont.getUserType("org", "org"));
-                f.Show();
+                MessageBox.Show("Incorrect Email or Password!");
+                //Event_Calendar f = new Event_Calendar(cont.getUserID("org", "org"), cont.getUserType("org", "org"));
+                //f.Show();
+                return;
             }
 
         }

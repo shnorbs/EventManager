@@ -40,14 +40,14 @@ namespace DBapplication
                 MessageBox.Show("Please Enter Event Name");
                 return;
             }
-            string EventName=EventName_textbox.Text;
-            string EventDate = Convert.ToString(EventDate_picker.Value);
+            string EventName = EventName_textbox.Text;
+            string EventDate = (Convert.ToDateTime(EventDate_picker.Value)).ToString("yyyy-MM-dd"); 
             string Description = Description_textbox.Text;
-            string EventType =EventType_combobox.Text;
+            string EventType = EventType_combobox.Text;
             string StartTime = Convert.ToString(StartTime_picker.Text);
             string EndTime = Convert.ToString(EndTime_picker.Text);
             int Privacy = 0;
-            if(Private_checkbox.Checked)
+            if (Private_checkbox.Checked)
             {
                 Privacy = 1;
             }

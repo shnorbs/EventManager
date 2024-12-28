@@ -48,6 +48,11 @@ namespace DBapplication
                 "('" + Fname + "', NULL, '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, '" + Spec + "');";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int GetEventOrganizer(int id)
+        {
+            string query = "select Organizer FROM EventT where EventID = " + id + ";";
+            return (int)dbMan.ExecuteScalar(query);
+        }
         public int AddAdmin(int UserID)
         {
             string query = "UPDATE Users SET UserType = 'Admin' WHERE UserID = " + UserID + "AND UserType!='Organizer' ;";
@@ -357,7 +362,7 @@ namespace DBapplication
             return table;
         }
 
-        public void AddEvent(string EventName,int uID,string EventDate,string Description,string EventType,string StartTime,string EndTime,int Privacy,int Location)
+        public void AddEvent(string EventName, int uID, string EventDate, string Description, string EventType, string StartTime, string EndTime, int Privacy, int Location)
         {
             string query = $"INSERT INTO EventT (EventName, Organizer, Edate, Descriptions, Etype, Start_Time, End_Time, Privacy_Status, Location) VALUES('{EventName}','{uID}','{EventDate}','{Description}','{EventType}','{StartTime}','{EndTime}','{Privacy}','{Location}');";
             int obj = dbMan.ExecuteNonQuery(query);

@@ -34,9 +34,24 @@ namespace DBapplication
             EventID = eID;
             Invites.Enabled = false;
             Invites.Visible = false;
-        
-           
 
+
+            if (cont.GetEventOrganizer(EventID) == UserID)
+            {
+                Invites.Enabled = true;
+                Invites.Visible = true;
+                Buy.Enabled = false;
+                Buy.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                Number.Visible = false;
+                Ticket_Type.Enabled = false;
+                Ticket_Type.Visible = false;
+                button2.Enabled = false;
+                button2.Visible = false;
+                button1.Enabled = false;
+                button1.Visible = false;
+            }
 
             DataTable dt = cont.SelectTicketType(eID);
             bool ticketsExist =cont.Find_if_tickets(EventID);
@@ -46,19 +61,17 @@ namespace DBapplication
                 
                 Buy.Enabled = false;
                 Buy.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                Number.Visible = false;
                 Ticket_Type.Enabled = false;
                 Ticket_Type.Visible = false;
                 button2.Enabled = false;
                 button2.Visible = false;
                 button1.Enabled = false;
                 button1.Visible = false;
-                if (type == "Organizer")
-                {
-                    Invites.Enabled = true;
-                    Invites.Visible = true;
-                }
                 return;
-
+                
             }
          
             Ticket_Type.DisplayMember ="Ticket_Type";
