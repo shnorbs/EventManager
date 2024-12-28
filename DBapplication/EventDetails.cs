@@ -192,5 +192,11 @@ namespace DBapplication
             table.Show();
 
         }
+
+        private void ViewLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AllFeedback form = new AllFeedback(UserID, EventID);
+            form.Show();
+        }
     }
 }

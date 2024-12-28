@@ -52,9 +52,10 @@
             this.VenueAddress_label.AutoSize = true;
             this.VenueAddress_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.VenueAddress_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.VenueAddress_label.Location = new System.Drawing.Point(36, 49);
+            this.VenueAddress_label.Location = new System.Drawing.Point(42, 60);
+            this.VenueAddress_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VenueAddress_label.Name = "VenueAddress_label";
-            this.VenueAddress_label.Size = new System.Drawing.Size(122, 21);
+            this.VenueAddress_label.Size = new System.Drawing.Size(151, 28);
             this.VenueAddress_label.TabIndex = 0;
             this.VenueAddress_label.Text = "Venue Address";
             // 
@@ -63,9 +64,10 @@
             this.VenueName_label.AutoSize = true;
             this.VenueName_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.VenueName_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.VenueName_label.Location = new System.Drawing.Point(36, 90);
+            this.VenueName_label.Location = new System.Drawing.Point(42, 111);
+            this.VenueName_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VenueName_label.Name = "VenueName_label";
-            this.VenueName_label.Size = new System.Drawing.Size(108, 21);
+            this.VenueName_label.Size = new System.Drawing.Size(132, 28);
             this.VenueName_label.TabIndex = 1;
             this.VenueName_label.Text = "Venue Name";
             // 
@@ -74,9 +76,10 @@
             this.Capacity_label.AutoSize = true;
             this.Capacity_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.Capacity_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.Capacity_label.Location = new System.Drawing.Point(36, 127);
+            this.Capacity_label.Location = new System.Drawing.Point(42, 156);
+            this.Capacity_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Capacity_label.Name = "Capacity_label";
-            this.Capacity_label.Size = new System.Drawing.Size(76, 21);
+            this.Capacity_label.Size = new System.Drawing.Size(93, 28);
             this.Capacity_label.TabIndex = 2;
             this.Capacity_label.Text = "Capacity";
             // 
@@ -85,38 +88,43 @@
             this.BookingPrice_label.AutoSize = true;
             this.BookingPrice_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BookingPrice_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.BookingPrice_label.Location = new System.Drawing.Point(36, 164);
+            this.BookingPrice_label.Location = new System.Drawing.Point(42, 202);
+            this.BookingPrice_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BookingPrice_label.Name = "BookingPrice_label";
-            this.BookingPrice_label.Size = new System.Drawing.Size(116, 21);
+            this.BookingPrice_label.Size = new System.Drawing.Size(143, 28);
             this.BookingPrice_label.TabIndex = 3;
             this.BookingPrice_label.Text = "Booking Price";
             // 
             // VenueAddress_textbox
             // 
-            this.VenueAddress_textbox.Location = new System.Drawing.Point(187, 52);
+            this.VenueAddress_textbox.Location = new System.Drawing.Point(218, 64);
+            this.VenueAddress_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VenueAddress_textbox.Name = "VenueAddress_textbox";
-            this.VenueAddress_textbox.Size = new System.Drawing.Size(100, 20);
+            this.VenueAddress_textbox.Size = new System.Drawing.Size(116, 24);
             this.VenueAddress_textbox.TabIndex = 4;
             // 
             // VenueName_textbox
             // 
-            this.VenueName_textbox.Location = new System.Drawing.Point(187, 90);
+            this.VenueName_textbox.Location = new System.Drawing.Point(218, 111);
+            this.VenueName_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VenueName_textbox.Name = "VenueName_textbox";
-            this.VenueName_textbox.Size = new System.Drawing.Size(100, 20);
+            this.VenueName_textbox.Size = new System.Drawing.Size(116, 24);
             this.VenueName_textbox.TabIndex = 5;
             // 
             // Capacity_textbox
             // 
-            this.Capacity_textbox.Location = new System.Drawing.Point(187, 130);
+            this.Capacity_textbox.Location = new System.Drawing.Point(218, 160);
+            this.Capacity_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Capacity_textbox.Name = "Capacity_textbox";
-            this.Capacity_textbox.Size = new System.Drawing.Size(100, 20);
+            this.Capacity_textbox.Size = new System.Drawing.Size(116, 24);
             this.Capacity_textbox.TabIndex = 6;
             // 
             // BookingPrice_textbox
             // 
-            this.BookingPrice_textbox.Location = new System.Drawing.Point(187, 167);
+            this.BookingPrice_textbox.Location = new System.Drawing.Point(218, 206);
+            this.BookingPrice_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BookingPrice_textbox.Name = "BookingPrice_textbox";
-            this.BookingPrice_textbox.Size = new System.Drawing.Size(100, 20);
+            this.BookingPrice_textbox.Size = new System.Drawing.Size(116, 24);
             this.BookingPrice_textbox.TabIndex = 7;
             // 
             // AddVenue_button
@@ -124,9 +132,10 @@
             this.AddVenue_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.AddVenue_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.AddVenue_button.ForeColor = System.Drawing.Color.White;
-            this.AddVenue_button.Location = new System.Drawing.Point(112, 363);
+            this.AddVenue_button.Location = new System.Drawing.Point(131, 447);
+            this.AddVenue_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddVenue_button.Name = "AddVenue_button";
-            this.AddVenue_button.Size = new System.Drawing.Size(114, 50);
+            this.AddVenue_button.Size = new System.Drawing.Size(133, 62);
             this.AddVenue_button.TabIndex = 8;
             this.AddVenue_button.Text = "Add Venue";
             this.AddVenue_button.UseVisualStyleBackColor = false;
@@ -137,10 +146,10 @@
             this.FacilityType_label.AutoSize = true;
             this.FacilityType_label.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.FacilityType_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
-            this.FacilityType_label.Location = new System.Drawing.Point(36, 210);
+            this.FacilityType_label.Location = new System.Drawing.Point(42, 258);
             this.FacilityType_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FacilityType_label.Name = "FacilityType_label";
-            this.FacilityType_label.Size = new System.Drawing.Size(105, 21);
+            this.FacilityType_label.Size = new System.Drawing.Size(130, 28);
             this.FacilityType_label.TabIndex = 10;
             this.FacilityType_label.Text = "Facility Type";
             // 
@@ -148,18 +157,20 @@
             // 
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel32.Location = new System.Drawing.Point(-2, -19);
+            this.panel32.Location = new System.Drawing.Point(-2, -23);
+            this.panel32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(1291, 57);
+            this.panel32.Size = new System.Drawing.Size(1506, 70);
             this.panel32.TabIndex = 28;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(-11, 419);
+            this.panel1.Location = new System.Drawing.Point(-13, 516);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1291, 57);
+            this.panel1.Size = new System.Drawing.Size(1506, 70);
             this.panel1.TabIndex = 29;
             // 
             // FacilityTypeDataGrid
@@ -190,11 +201,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.FacilityTypeDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.FacilityTypeDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.FacilityTypeDataGrid.Location = new System.Drawing.Point(187, 193);
+            this.FacilityTypeDataGrid.Location = new System.Drawing.Point(218, 238);
+            this.FacilityTypeDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FacilityTypeDataGrid.Name = "FacilityTypeDataGrid";
             this.FacilityTypeDataGrid.RowHeadersVisible = false;
             this.FacilityTypeDataGrid.RowHeadersWidth = 51;
-            this.FacilityTypeDataGrid.Size = new System.Drawing.Size(100, 78);
+            this.FacilityTypeDataGrid.Size = new System.Drawing.Size(117, 96);
             this.FacilityTypeDataGrid.TabIndex = 30;
             // 
             // Price_column
@@ -206,10 +218,10 @@
             // 
             // AddVenue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(956, 450);
+            this.ClientSize = new System.Drawing.Size(454, 554);
             this.Controls.Add(this.FacilityTypeDataGrid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel32);
@@ -223,6 +235,7 @@
             this.Controls.Add(this.Capacity_label);
             this.Controls.Add(this.VenueName_label);
             this.Controls.Add(this.VenueAddress_label);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddVenue";
             this.Text = "Add Venue";
             this.Load += new System.EventHandler(this.AddVenue_Load);

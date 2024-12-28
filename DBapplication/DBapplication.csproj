@@ -118,6 +118,12 @@
     <Compile Include="FeedbackReports.Designer.cs">
       <DependentUpon>FeedbackReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllFeedback.Designer.cs">
+      <DependentUpon>AllFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FeedbackReports.resx">
       <DependentUpon>FeedbackReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllFeedback.resx">
+      <DependentUpon>AllFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageReports.resx">
       <DependentUpon>ManageReports.cs</DependentUpon>
