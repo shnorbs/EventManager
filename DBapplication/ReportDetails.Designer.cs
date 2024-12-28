@@ -46,6 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(136, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(334, 32);
@@ -56,6 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.label2.Location = new System.Drawing.Point(33, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 21);
@@ -66,6 +68,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.label3.Location = new System.Drawing.Point(33, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 21);
@@ -96,6 +99,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.label4.Location = new System.Drawing.Point(33, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 21);
@@ -113,7 +117,9 @@
             // 
             // BanOrganizerButton
             // 
-            this.BanOrganizerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BanOrganizerButton.BackColor = System.Drawing.Color.Red;
+            this.BanOrganizerButton.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.BanOrganizerButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BanOrganizerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BanOrganizerButton.Location = new System.Drawing.Point(37, 429);
             this.BanOrganizerButton.Name = "BanOrganizerButton";
@@ -125,8 +131,10 @@
             // 
             // DeleteEventButton
             // 
-            this.DeleteEventButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.DeleteEventButton.BackColor = System.Drawing.Color.Red;
             this.DeleteEventButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DeleteEventButton.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.DeleteEventButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DeleteEventButton.Location = new System.Drawing.Point(235, 429);
             this.DeleteEventButton.Name = "DeleteEventButton";
             this.DeleteEventButton.Size = new System.Drawing.Size(144, 58);
@@ -137,7 +145,9 @@
             // 
             // IgnoreButton
             // 
-            this.IgnoreButton.BackColor = System.Drawing.Color.Silver;
+            this.IgnoreButton.BackColor = System.Drawing.Color.DimGray;
+            this.IgnoreButton.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.IgnoreButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.IgnoreButton.Location = new System.Drawing.Point(431, 429);
             this.IgnoreButton.Name = "IgnoreButton";
             this.IgnoreButton.Size = new System.Drawing.Size(151, 58);
@@ -150,6 +160,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.label5.Location = new System.Drawing.Point(33, 405);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 21);
@@ -170,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(628, 506);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

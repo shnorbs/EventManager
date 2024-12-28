@@ -37,6 +37,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(41, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(369, 48);
@@ -45,30 +46,35 @@
             // 
             // EventButton
             // 
+            this.EventButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.EventButton.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.EventButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.EventButton.Location = new System.Drawing.Point(141, 155);
             this.EventButton.Name = "EventButton";
             this.EventButton.Size = new System.Drawing.Size(147, 105);
             this.EventButton.TabIndex = 1;
             this.EventButton.Text = "Event";
-            this.EventButton.UseVisualStyleBackColor = true;
+            this.EventButton.UseVisualStyleBackColor = false;
             this.EventButton.Click += new System.EventHandler(this.EventButton_Click);
             // 
             // FeedbackButton
             // 
+            this.FeedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.FeedbackButton.Font = new System.Drawing.Font("Tahoma", 16F);
+            this.FeedbackButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.FeedbackButton.Location = new System.Drawing.Point(141, 266);
             this.FeedbackButton.Name = "FeedbackButton";
             this.FeedbackButton.Size = new System.Drawing.Size(147, 110);
             this.FeedbackButton.TabIndex = 2;
             this.FeedbackButton.Text = "Feedback";
-            this.FeedbackButton.UseVisualStyleBackColor = true;
+            this.FeedbackButton.UseVisualStyleBackColor = false;
             this.FeedbackButton.Click += new System.EventHandler(this.FeedbackButton_Click);
             // 
             // ManageReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(451, 450);
             this.Controls.Add(this.FeedbackButton);
             this.Controls.Add(this.EventButton);
