@@ -34,7 +34,7 @@ namespace DBapplication
             EventID = eID;
             Invites.Enabled = false;
             Invites.Visible = false;
-            ViewLink.Enabled = false;
+            ViewLink.Visible = false;
 
 
             if (cont.GetEventOrganizer(EventID) == UserID)
@@ -52,7 +52,7 @@ namespace DBapplication
                 button2.Visible = false;
                 button1.Enabled = false;
                 button1.Visible = false;
-                ViewLink.Enabled = true;
+                ViewLink.Visible = true;
             }
 
             DataTable dt = cont.SelectTicketType(eID);
