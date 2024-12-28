@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.EventName_label = new System.Windows.Forms.Label();
             this.EventName_textbox = new System.Windows.Forms.TextBox();
             this.EventDate_picker = new System.Windows.Forms.DateTimePicker();
@@ -46,14 +50,8 @@
             this.AddVenue_button = new System.Windows.Forms.Button();
             this.Tickets_label = new System.Windows.Forms.Label();
             this.TicketsDataGrid = new System.Windows.Forms.DataGridView();
-            this.TicketType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tprice_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number_of_tickets_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Service_label = new System.Windows.Forms.Label();
             this.ServicesDataGrid = new System.Windows.Forms.DataGridView();
-            this.ServiceName_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ServiceType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Refresh_Button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,6 +60,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.AddSponsor_button = new System.Windows.Forms.Button();
+            this.TicketType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tprice_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number_of_tickets_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceName_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TicketsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServicesDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
@@ -119,6 +123,7 @@
             // 
             // Description_textbox
             // 
+            this.Description_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Description_textbox.Location = new System.Drawing.Point(45, 251);
             this.Description_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Description_textbox.Multiline = true;
@@ -262,7 +267,7 @@
             this.AddVenue_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.AddVenue_button.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.AddVenue_button.ForeColor = System.Drawing.Color.White;
-            this.AddVenue_button.Location = new System.Drawing.Point(413, 129);
+            this.AddVenue_button.Location = new System.Drawing.Point(437, 129);
             this.AddVenue_button.Name = "AddVenue_button";
             this.AddVenue_button.Size = new System.Drawing.Size(91, 38);
             this.AddVenue_button.TabIndex = 18;
@@ -283,37 +288,39 @@
             // 
             // TicketsDataGrid
             // 
+            this.TicketsDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            this.TicketsDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TicketsDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.TicketsDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TicketsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TicketsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TicketsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TicketType_column,
             this.Tprice_column,
             this.Number_of_tickets_column});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TicketsDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TicketsDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.TicketsDataGrid.Location = new System.Drawing.Point(290, 410);
             this.TicketsDataGrid.Name = "TicketsDataGrid";
+            this.TicketsDataGrid.RowHeadersVisible = false;
             this.TicketsDataGrid.RowHeadersWidth = 51;
-            this.TicketsDataGrid.Size = new System.Drawing.Size(343, 101);
+            this.TicketsDataGrid.Size = new System.Drawing.Size(390, 101);
             this.TicketsDataGrid.TabIndex = 20;
-            // 
-            // TicketType_column
-            // 
-            this.TicketType_column.HeaderText = "Ticket Type";
-            this.TicketType_column.MinimumWidth = 6;
-            this.TicketType_column.Name = "TicketType_column";
-            this.TicketType_column.Width = 125;
-            // 
-            // Tprice_column
-            // 
-            this.Tprice_column.HeaderText = "Price";
-            this.Tprice_column.MinimumWidth = 6;
-            this.Tprice_column.Name = "Tprice_column";
-            this.Tprice_column.Width = 125;
-            // 
-            // Number_of_tickets_column
-            // 
-            this.Number_of_tickets_column.HeaderText = "Number of tickets";
-            this.Number_of_tickets_column.MinimumWidth = 6;
-            this.Number_of_tickets_column.Name = "Number_of_tickets_column";
-            this.Number_of_tickets_column.Width = 125;
             // 
             // Service_label
             // 
@@ -322,43 +329,46 @@
             this.Service_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
             this.Service_label.Location = new System.Drawing.Point(286, 228);
             this.Service_label.Name = "Service_label";
-            this.Service_label.Size = new System.Drawing.Size(152, 21);
+            this.Service_label.Size = new System.Drawing.Size(156, 21);
             this.Service_label.TabIndex = 21;
-            this.Service_label.Text = "Services(Optional)";
+            this.Service_label.Text = "Services (Optional)";
             // 
             // ServicesDataGrid
             // 
+            this.ServicesDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            this.ServicesDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ServicesDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.ServicesDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ServicesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ServicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ServicesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ServiceName_column,
             this.ServiceType_column,
             this.Price_column});
+            this.ServicesDataGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ServicesDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ServicesDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.ServicesDataGrid.Location = new System.Drawing.Point(290, 257);
             this.ServicesDataGrid.Name = "ServicesDataGrid";
+            this.ServicesDataGrid.RowHeadersVisible = false;
             this.ServicesDataGrid.RowHeadersWidth = 51;
-            this.ServicesDataGrid.Size = new System.Drawing.Size(343, 92);
+            this.ServicesDataGrid.Size = new System.Drawing.Size(390, 92);
             this.ServicesDataGrid.TabIndex = 24;
-            // 
-            // ServiceName_column
-            // 
-            this.ServiceName_column.HeaderText = "Service Name";
-            this.ServiceName_column.MinimumWidth = 6;
-            this.ServiceName_column.Name = "ServiceName_column";
-            this.ServiceName_column.Width = 125;
-            // 
-            // ServiceType_column
-            // 
-            this.ServiceType_column.HeaderText = "Service Type";
-            this.ServiceType_column.MinimumWidth = 6;
-            this.ServiceType_column.Name = "ServiceType_column";
-            this.ServiceType_column.Width = 125;
-            // 
-            // Price_column
-            // 
-            this.Price_column.HeaderText = "Price";
-            this.Price_column.MinimumWidth = 6;
-            this.Price_column.Name = "Price_column";
-            this.Price_column.Width = 125;
             // 
             // Refresh_Button
             // 
@@ -436,7 +446,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(346, 90);
+            this.label2.Location = new System.Drawing.Point(370, 90);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(239, 30);
@@ -459,12 +469,54 @@
             this.AddSponsor_button.UseVisualStyleBackColor = false;
             this.AddSponsor_button.Click += new System.EventHandler(this.AddSponsor_button_Click);
             // 
+            // TicketType_column
+            // 
+            this.TicketType_column.HeaderText = "Ticket Type";
+            this.TicketType_column.MinimumWidth = 6;
+            this.TicketType_column.Name = "TicketType_column";
+            this.TicketType_column.Width = 125;
+            // 
+            // Tprice_column
+            // 
+            this.Tprice_column.HeaderText = "Price";
+            this.Tprice_column.MinimumWidth = 6;
+            this.Tprice_column.Name = "Tprice_column";
+            this.Tprice_column.Width = 125;
+            // 
+            // Number_of_tickets_column
+            // 
+            this.Number_of_tickets_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Number_of_tickets_column.HeaderText = "Number of tickets";
+            this.Number_of_tickets_column.MinimumWidth = 6;
+            this.Number_of_tickets_column.Name = "Number_of_tickets_column";
+            // 
+            // ServiceName_column
+            // 
+            this.ServiceName_column.HeaderText = "Service Name";
+            this.ServiceName_column.MinimumWidth = 6;
+            this.ServiceName_column.Name = "ServiceName_column";
+            this.ServiceName_column.Width = 125;
+            // 
+            // ServiceType_column
+            // 
+            this.ServiceType_column.HeaderText = "Service Type";
+            this.ServiceType_column.MinimumWidth = 6;
+            this.ServiceType_column.Name = "ServiceType_column";
+            this.ServiceType_column.Width = 125;
+            // 
+            // Price_column
+            // 
+            this.Price_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price_column.HeaderText = "Price";
+            this.Price_column.MinimumWidth = 6;
+            this.Price_column.Name = "Price_column";
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(658, 647);
+            this.ClientSize = new System.Drawing.Size(711, 647);
             this.Controls.Add(this.AddSponsor_button);
             this.Controls.Add(this.AddEvent_button);
             this.Controls.Add(this.panel3);
@@ -521,14 +573,8 @@
         private System.Windows.Forms.Button AddVenue_button;
         private System.Windows.Forms.Label Tickets_label;
         private System.Windows.Forms.DataGridView TicketsDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TicketType_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tprice_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number_of_tickets_column;
         private System.Windows.Forms.Label Service_label;
         private System.Windows.Forms.DataGridView ServicesDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceName_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceType_column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price_column;
         private System.Windows.Forms.Button Refresh_Button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -537,5 +583,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button AddSponsor_button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TicketType_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tprice_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number_of_tickets_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceName_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServiceType_column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price_column;
     }
 }

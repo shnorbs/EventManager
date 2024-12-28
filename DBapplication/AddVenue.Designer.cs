@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.VenueAddress_label = new System.Windows.Forms.Label();
             this.VenueName_label = new System.Windows.Forms.Label();
             this.Capacity_label = new System.Windows.Forms.Label();
@@ -38,10 +40,10 @@
             this.BookingPrice_textbox = new System.Windows.Forms.TextBox();
             this.AddVenue_button = new System.Windows.Forms.Button();
             this.FacilityType_label = new System.Windows.Forms.Label();
-            this.FacilityTypeDataGrid = new System.Windows.Forms.DataGridView();
-            this.FacilityType_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FacilityTypeDataGrid = new System.Windows.Forms.DataGridView();
+            this.Price_column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.FacilityTypeDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,21 +144,6 @@
             this.FacilityType_label.TabIndex = 10;
             this.FacilityType_label.Text = "Facility Type";
             // 
-            // FacilityTypeDataGrid
-            // 
-            this.FacilityTypeDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FacilityTypeDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FacilityType_column});
-            this.FacilityTypeDataGrid.Location = new System.Drawing.Point(187, 210);
-            this.FacilityTypeDataGrid.Name = "FacilityTypeDataGrid";
-            this.FacilityTypeDataGrid.Size = new System.Drawing.Size(143, 87);
-            this.FacilityTypeDataGrid.TabIndex = 11;
-            // 
-            // FacilityType_column
-            // 
-            this.FacilityType_column.HeaderText = "Type";
-            this.FacilityType_column.Name = "FacilityType_column";
-            // 
             // panel32
             // 
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
@@ -175,15 +162,57 @@
             this.panel1.Size = new System.Drawing.Size(1291, 57);
             this.panel1.TabIndex = 29;
             // 
+            // FacilityTypeDataGrid
+            // 
+            this.FacilityTypeDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            this.FacilityTypeDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FacilityTypeDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.FacilityTypeDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FacilityTypeDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.FacilityTypeDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.FacilityTypeDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Price_column});
+            this.FacilityTypeDataGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(184)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.FacilityTypeDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.FacilityTypeDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.FacilityTypeDataGrid.Location = new System.Drawing.Point(187, 193);
+            this.FacilityTypeDataGrid.Name = "FacilityTypeDataGrid";
+            this.FacilityTypeDataGrid.RowHeadersVisible = false;
+            this.FacilityTypeDataGrid.RowHeadersWidth = 51;
+            this.FacilityTypeDataGrid.Size = new System.Drawing.Size(100, 78);
+            this.FacilityTypeDataGrid.TabIndex = 30;
+            // 
+            // Price_column
+            // 
+            this.Price_column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Price_column.HeaderText = "Type";
+            this.Price_column.MinimumWidth = 6;
+            this.Price_column.Name = "Price_column";
+            // 
             // AddVenue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(368, 450);
+            this.ClientSize = new System.Drawing.Size(956, 450);
+            this.Controls.Add(this.FacilityTypeDataGrid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel32);
-            this.Controls.Add(this.FacilityTypeDataGrid);
             this.Controls.Add(this.FacilityType_label);
             this.Controls.Add(this.AddVenue_button);
             this.Controls.Add(this.BookingPrice_textbox);
@@ -215,9 +244,9 @@
         private System.Windows.Forms.TextBox BookingPrice_textbox;
         private System.Windows.Forms.Button AddVenue_button;
         private System.Windows.Forms.Label FacilityType_label;
-        private System.Windows.Forms.DataGridView FacilityTypeDataGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FacilityType_column;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView FacilityTypeDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price_column;
     }
 }

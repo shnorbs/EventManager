@@ -19,7 +19,7 @@ namespace DBapplication
         {
             InitializeComponent();
             specBox.Enabled = false;
-            numberBox.MaxLength = 10;
+            numberBox.MaxLength = 11;
 
             emailBox.GotFocus += new EventHandler((sender, e) => RemovePlaceholderText(sender, e, "E-Mail"));
             emailBox.LostFocus += new EventHandler((sender, e) => SetPlaceholderText(sender, e, "E-Mail"));
