@@ -126,23 +126,23 @@ namespace DBapplication
 
         public void calcDays(int mm, int yy)
         {
-            flowLayoutPanel1.Controls.Clear(); //clear panels from last month
-            string monthName = new DateTimeFormatInfo().GetMonthName(mm); //get month name to put it in the label
+            flowLayoutPanel1.Controls.Clear(); 
+            string monthName = new DateTimeFormatInfo().GetMonthName(mm);
             monthLabel.Text = monthName +" \n" +current_year.ToString();
-            DateTime first_day = new DateTime(yy, mm, 1); //make a date for the first of the month
+            DateTime first_day = new DateTime(yy, mm, 1);
 
-            int month_days = DateTime.DaysInMonth(yy, mm); //calculate how many days in the current month
-            int month_start = Convert.ToInt32(first_day.DayOfWeek); // find which day the current month starts at
+            int month_days = DateTime.DaysInMonth(yy, mm);
+            int month_start = Convert.ToInt32(first_day.DayOfWeek);
 
             for (int i = 0; i < month_start; i++)
             {
-                DayUC emptyday = new DayUC("", "", "", uID, cont); //add empty panels for days of last month
+                DayUC emptyday = new DayUC("", "", "", uID, cont);
                 flowLayoutPanel1.Controls.Add(emptyday);
             }
 
             for (int i = 1; i <= month_days; i++)
             {
-                DayUC dayPanel = new DayUC(i.ToString(), mm.ToString(), yy.ToString(), uID, cont);  //add day panels of the current month
+                DayUC dayPanel = new DayUC(i.ToString(), mm.ToString(), yy.ToString(), uID, cont);
                 flowLayoutPanel1.Controls.Add(dayPanel);
             }
         }

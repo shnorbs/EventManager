@@ -12,7 +12,7 @@ namespace DBapplication
     {
 
 
-        static string DB_Connection_String = @"Data Source=SHNORBS_LAP\SQLEXPRESS;Initial Catalog=EventManager;Integrated Security=True;Encrypt=False";
+        static string DB_Connection_String = @"Data Source=SHNORBS_LAP\SQLEXPRESS;Initial Catalog=newEventManager;Integrated Security=True;Encrypt=False";
 
 
         SqlConnection myConnection;
