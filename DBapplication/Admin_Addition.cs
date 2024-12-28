@@ -61,7 +61,8 @@ namespace DBapplication
         {
             if (textBox1.Text == "")
                 MessageBox.Show("User_ID is not empty");
-            int r = controllerObj.AddAdmin(Convert.ToInt32(textBox1.Text));
+            int id = controllerObj.getUserIDbyemail(textBox1.Text);
+            int r = controllerObj.AddAdmin(id);
             if (r == 0)
             {
                 MessageBox.Show("User is an Organizer or no user with that UserID");

@@ -793,6 +793,11 @@ namespace DBapplication
             //}
         }
 
+        public int getUserIDbyemail(string email)
+        {
+            string query = "select UserID from Users u where u.Email = '" + email + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
         public DataTable LoadInvites (int userID)
         {
             string query = "SELECT E.EventName, E.Descriptions, E.Edate, E.Start_Time, E.End_Time " +
