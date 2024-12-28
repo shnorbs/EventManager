@@ -65,8 +65,7 @@ namespace DBapplication
 
         private void Change_Password_Click(object sender, EventArgs e)
         {
-            ChangePassword table = new ChangePassword();
-            table.Show();
+            
 
         }
 

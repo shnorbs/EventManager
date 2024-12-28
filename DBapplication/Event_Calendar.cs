@@ -103,6 +103,12 @@ namespace DBapplication
             }
         }
 
+        private void Change_Password_Click(object sender, EventArgs e)
+        {
+            ChangePassword table = new ChangePassword();
+            table.Show();
+        }
+
         private void prev_Click(object sender, EventArgs e)
         {
             if (current_month == 1)

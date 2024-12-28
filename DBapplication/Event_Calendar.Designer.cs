@@ -74,6 +74,7 @@ namespace DBapplication
             this.remindersBtn = new System.Windows.Forms.PictureBox();
             this.next = new System.Windows.Forms.PictureBox();
             this.prev = new System.Windows.Forms.PictureBox();
+            this.Change_Password = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addEventBtn)).BeginInit();
@@ -433,7 +434,6 @@ namespace DBapplication
             // 
             this.panel32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(60)))), ((int)(((byte)(68)))));
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel32.Controls.Add(this.button1);
             this.panel32.Controls.Add(this.addEventBtn);
             this.panel32.Controls.Add(this.remindersBtn);
             this.panel32.Controls.Add(this.next);
@@ -447,13 +447,13 @@ namespace DBapplication
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(717, 50);
+            this.button1.Location = new System.Drawing.Point(1068, 962);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 43);
             this.button1.TabIndex = 13;
@@ -507,12 +507,30 @@ namespace DBapplication
             this.prev.TabStop = false;
             this.prev.Click += new System.EventHandler(this.prev_Click);
             // 
+            // Change_Password
+            // 
+            this.Change_Password.BackColor = System.Drawing.Color.BurlyWood;
+            this.Change_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Change_Password.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Change_Password.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Change_Password.ForeColor = System.Drawing.Color.White;
+            this.Change_Password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Change_Password.Location = new System.Drawing.Point(953, 962);
+            this.Change_Password.Name = "Change_Password";
+            this.Change_Password.Size = new System.Drawing.Size(109, 43);
+            this.Change_Password.TabIndex = 14;
+            this.Change_Password.Text = "Change Password";
+            this.Change_Password.UseVisualStyleBackColor = false;
+            this.Change_Password.Click += new System.EventHandler(this.Change_Password_Click);
+            // 
             // Event_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(1254, 960);
+            this.ClientSize = new System.Drawing.Size(1254, 1017);
+            this.Controls.Add(this.Change_Password);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -583,5 +601,6 @@ namespace DBapplication
         private System.Windows.Forms.PictureBox remindersBtn;
         private System.Windows.Forms.PictureBox addEventBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Change_Password;
     }
 }
