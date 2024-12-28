@@ -28,7 +28,7 @@ namespace DBapplication
 
         private void AdminMode_Click(object sender, EventArgs e)
         {
-            AdminMode form = new AdminMode(ID);
+            ManageReports form = new ManageReports(ID);
             form.Show();
         }
 

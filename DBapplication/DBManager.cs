@@ -12,7 +12,7 @@ namespace DBapplication
     {
 
 
-        static string DB_Connection_String = @"Data Source=Martin\SQLEXPRESS;Initial Catalog=EventManager;Integrated Security=True";
+        static string DB_Connection_String = @"Data Source=Mohamed-Tamer\SQLEXPRESS;Initial Catalog=EventManager;Integrated Security=True;";
 
 
         SqlConnection myConnection;

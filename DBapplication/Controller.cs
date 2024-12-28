@@ -94,12 +94,6 @@ namespace DBapplication
             string query = "UPDATE Users SET Password = '" + newPassword + "' WHERE Email = '" + email + "';";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int AddUser(string Fname, string Type, string Email, string Pass, float number)
-        {
-            string query = "INSERT INTO Users (First_Name, Last_Name, UserType, Email, Password, Phone_Number, Banned, Specialization) VALUES " +
-                "('" + Fname + "', NULL, '" + Type + "', '" + Email + "', '" + Pass + "', " + number + ", 0, NULL);";
-            return dbMan.ExecuteNonQuery(query);
-        }
 
         public int getUserID(string email, string pass)
         {
@@ -361,11 +355,19 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
-        public DataTable ShowReports (string filter) 
+        public DataTable LoadFeedbackReports ()
+        {
+            string query = "SELECT R.Report_ID, R.Handled, U.Email, F.Comment, R.Report_Description " +
+                           "FROM Feedback AS F, Users AS U, Report AS R " +
+                           "WHERE R.FeedbackID = F.Feedback_ID AND F.UserID = U.UserID";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable ShowEventReports (string filter) 
         {
             string query = "SELECT R.Report_ID, R.Handled, E.EventName, R.Report_Description, R.Admin_Reply " +
                            "FROM Report AS R " +
-                           "JOIN EventT AS E ON R.EventID = E.EventID"; // Default query for "All"
+                           "JOIN EventT AS E ON R.EventID = E.EventID"; // default for "All"
 
             if (filter == "Handled")
             {
@@ -379,6 +381,24 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
+        public DataTable ShowFeedbackReports(string filter)
+        {
+            string query = "SELECT R.Report_ID, R.Handled, U.Email, F.Comment, R.Report_Description " +
+                           "FROM Feedback AS F, Users AS U, Report AS R " +
+                           "WHERE R.FeedbackID = F.Feedback_ID AND F.UserID = U.UserID"; // default for "All"
+
+            if (filter == "Handled")
+            {
+                query += " AND R.Handled = 1";
+            }
+            else if (filter == "Unhandled")
+            {
+                query += " AND R.Handled = 0";
+            }
+
+            return dbMan.ExecuteReader(query);
+        }
+            
         public string getReportedEventName(int reportID)
         {
             string query = "SELECT E.EventName " +
@@ -386,6 +406,15 @@ namespace DBapplication
                            "JOIN EventT AS E ON R.EventID = E.EventID " +
                            "WHERE R.Report_ID = " + reportID + ";";
             return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public string getCommentReported (int reportID)
+        {
+            string query = "SELECT F.Comment " +
+                           "FROM Feedback AS F " +
+                           "JOIN Report AS R ON R.FeedbackID = F.Feedback_ID " +
+                           "WHERE R.Report_ID = " + reportID + ";";
+            return dbMan.ExecuteScalar (query).ToString();
         }
 
         public string getReportDescription(int reportID)
@@ -412,12 +441,30 @@ namespace DBapplication
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public int getFeedbackID (int reportID)
+        {
+            string query = "SELECT Feedback_ID " +
+                           "FROM Feedback AS F " +
+                           "JOIN Report AS R ON R.FeedbackID = F.Feedback_ID " +
+                           "WHERE R.Report_ID = " + reportID + ";";
+            return (int) dbMan.ExecuteScalar(query);
+        }
+
         public int DeleteEvent(int reportID)
         {
             int eventID = getEventID(reportID);
             string query = "UPDATE EventT " +
                            "SET Active = 0 " +
                            "WHERE EventID = " + eventID + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int RemoveFeedback (int reportID)
+        {
+            int fb_id = getFeedbackID (reportID);
+            string query = "UPDATE Feedback " +
+                           "SET Hide = 1 " +
+                           "WHERE Feedback_ID = " + fb_id + ";";
             return dbMan.ExecuteNonQuery(query);
         }
 

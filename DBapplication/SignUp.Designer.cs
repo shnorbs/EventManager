@@ -330,13 +330,11 @@
         private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox lnameBox;
         private System.Windows.Forms.TextBox fnameBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.TextBox specBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox specCombo;
-        private System.Windows.Forms.Label label1;
     }
 }

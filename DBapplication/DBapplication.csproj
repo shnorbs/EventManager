@@ -106,6 +106,24 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminMode2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMode2.Designer.cs">
+      <DependentUpon>AdminMode2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackReports.Designer.cs">
+      <DependentUpon>FeedbackReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageReports.Designer.cs">
+      <DependentUpon>ManageReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Invites.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +212,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMode.resx">
       <DependentUpon>AdminMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMode2.resx">
+      <DependentUpon>AdminMode2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackReports.resx">
+      <DependentUpon>FeedbackReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageReports.resx">
+      <DependentUpon>ManageReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemindersList.resx">
       <DependentUpon>RemindersList.cs</DependentUpon>
