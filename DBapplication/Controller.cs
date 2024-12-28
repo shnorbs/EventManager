@@ -844,6 +844,21 @@ namespace DBapplication
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public DataTable getFeedback(int eventID)
+        {
+            string query = "SELECT Feedback_ID, Rating, Comment, FB_date " +
+                           "FROM Feedback " +
+                           "WHERE Hide = 0 AND EventID = " + eventID + ";";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int ReportFeedback (int fb_id, string description, int userID)
+        {
+            string query = "INSERT INTO Report (Handled, Report_Description, UserID, FeedbackID) " +
+                           "VALUES (0, '" + description + "', " + userID + ", " + fb_id + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
