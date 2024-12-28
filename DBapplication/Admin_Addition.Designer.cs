@@ -84,6 +84,7 @@
             this.Make_Admin.TabIndex = 33;
             this.Make_Admin.Text = "Make Admin";
             this.Make_Admin.UseVisualStyleBackColor = false;
+            this.Make_Admin.Click += new System.EventHandler(this.Make_Admin_Click_1);
             // 
             // textBox1
             // 

@@ -29,17 +29,7 @@ namespace DBapplication
         }
 
         private void Make_Admin_Click(object sender, EventArgs e)
-        {   if (textBox1.Text == "")
-                MessageBox.Show("User_ID is not empty");
-            int r=controllerObj.AddAdmin(Convert.ToInt32(textBox1.Text));
-            if(r==0)
-            {
-             MessageBox.Show("User is an Organizer or no user with that UserID");
-             return;   
-            }
-            DataTable dt = controllerObj.ShowAllAdmins();
-            dataGridView1.DataSource = dt;
-            dataGridView1.Refresh();
+        {  
         }
 
         private void Admin_Addition_Load(object sender, EventArgs e)
@@ -65,6 +55,21 @@ namespace DBapplication
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Make_Admin_Click_1(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+                MessageBox.Show("User_ID is not empty");
+            int r = controllerObj.AddAdmin(Convert.ToInt32(textBox1.Text));
+            if (r == 0)
+            {
+                MessageBox.Show("User is an Organizer or no user with that UserID");
+                return;
+            }
+            DataTable dt = controllerObj.ShowAllAdmins();
+            dataGridView1.DataSource = dt;
+            dataGridView1.Refresh();
         }
     }
 }
