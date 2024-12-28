@@ -27,7 +27,18 @@ namespace DBapplication
 
         }
 
-        private void Invite_button_Click(object sender, EventArgs e)
+        
+
+        private void Done_button_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < UserInvitedDataGrid.Rows.Count - 1; i++)
+            {
+                string email = UserInvitedDataGrid.Rows[i].Cells[2].Value.ToString();
+                controllerObj.AddInvite(email, Ename, RSVP);
+            }
+        }
+
+        private void Invite_button_Click_1(object sender, EventArgs e)
         {
             if (UserDataGrid.SelectedRows.Count > 0)
             {
@@ -47,19 +58,9 @@ namespace DBapplication
             {
                 MessageBox.Show("Please select rows to transfer.");
             }
-
         }
 
-        private void Done_button_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < UserInvitedDataGrid.Rows.Count - 1; i++)
-            {
-                string email=UserInvitedDataGrid.Rows[i].Cells[2].Value.ToString();
-                controllerObj.AddInvite(email,Ename,RSVP);
-            }
-        }
-
-        private void Remove_button_Click(object sender, EventArgs e)
+        private void Remove_button_Click_1(object sender, EventArgs e)
         {
             if (UserInvitedDataGrid.SelectedRows.Count > 0)
             {
