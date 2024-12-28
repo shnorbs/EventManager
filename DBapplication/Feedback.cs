@@ -38,6 +38,12 @@ namespace DBapplication
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked && !radioButton4.Checked && !radioButton5.Checked)
+            {
+                MessageBox.Show("Please select a rating!");
+                return;
+            }
+
             string comments = "";
             if (commentBox.Text != "")
             {
